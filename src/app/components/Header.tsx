@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 import { MegaMenu } from "./MegaMenu";
 import { SimpleMenu } from "./SimpleMenu";
 import {
+
   careersMenu,
   solutionsMegaMenu,
   whatWeDoMegaMenu,
   whoWeAreMegaMenu,
 } from "./nav";
-
+import  Image  from 'next/image';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,17 +26,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-surface/85 backdrop-blur supports-[backdrop-filter]:bg-surface/70">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="grid size-9 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <span className="text-sm font-bold tracking-tight">FB</span>
-          </span>
-          <div className="leading-tight">
-            <p className="text-sm font-semibold text-foreground">FusionByte</p>
-            <p className="text-xs text-muted-foreground">
-              IT Consultation & Solutions
-            </p>
-          </div>
-        </Link>
+   <Link href="/" className="flex items-center gap-2">
+  <Image
+    src="/logo.jpeg"
+    width={0}
+    height={0}
+    sizes="100vw"
+    alt="Logo"
+    className="w-52 h-auto"
+  />
+</Link>
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-foreground/90 lg:flex">
           <MegaMenu

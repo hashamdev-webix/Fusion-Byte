@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -6,19 +7,16 @@ export function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2">
-              <span className="grid size-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-                <span className="text-sm font-bold tracking-tight">FB</span>
-              </span>
-              <div className="leading-tight">
-                <p className="text-base font-semibold text-foreground">
-                  FusionByte
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  IT Consultation & Solutions
-                </p>
-              </div>
-            </Link>
+             <Link href="/" className="flex items-center gap-2">
+  <Image
+    src="/logo.jpeg"
+    width={0}
+    height={0}
+    sizes="100vw"
+    alt="Logo"
+    className="w-52 h-auto"
+  />
+</Link>
 
             <p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">
               “Transforming Businesses Through Intelligent Technology
