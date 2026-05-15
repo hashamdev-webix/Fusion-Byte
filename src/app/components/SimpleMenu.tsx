@@ -41,7 +41,7 @@ export function SimpleMenu({ label, items }: Props) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={id}
-        className="inline-flex items-center gap-1 rounded-md px-2 py-1 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-inherit transition-colors hover:text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         onClick={() => setOpen((v) => !v)}
       >
         <span>{label}</span>

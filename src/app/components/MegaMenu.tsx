@@ -48,7 +48,7 @@ export function MegaMenu({ label, groups, featured, layout = "grid" }: Props) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={id}
-        className="inline-flex items-center gap-1 rounded-md px-2 py-1 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-inherit transition-colors hover:text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         onClick={() => {
           if (!open) setActiveGroupIndex(null);
           setOpen((v) => !v);
@@ -65,8 +65,8 @@ export function MegaMenu({ label, groups, featured, layout = "grid" }: Props) {
           className={[
             "absolute left-1/2 top-full mt-3 -translate-x-1/2 overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl",
             layout === "stack"
-              ? "w-[min(860px,calc(100vw-2rem))]"
-              : "w-[min(980px,calc(100vw-2rem))]",
+              ? "w-[min(980px,calc(100vw-1.5rem))]"
+              : "w-[min(1120px,calc(100vw-1.5rem))]",
           ].join(" ")}
         >
           <div className="max-h-[70vh] overflow-auto">

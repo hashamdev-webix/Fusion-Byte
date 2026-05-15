@@ -172,7 +172,7 @@ export default async function Page(props: {
                 </Link>
                 <Link
                   href="/get-a-quote"
-                  className="inline-flex h-10 flex-1 items-center justify-center rounded-full bg-foreground px-4 text-sm font-semibold text-background shadow-sm transition hover:bg-foreground/90"
+                  className="inline-flex h-10 flex-1 items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
                 >
                   Get a Quote
                 </Link>
@@ -184,4 +184,3 @@ export default async function Page(props: {
     </div>
   );
 }
-

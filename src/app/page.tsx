@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CardSlider, type SliderCard } from "./components/CardSlider";
+import { HeroBackgroundSlider } from "./components/HeroBackgroundSlider";
 import { QuoteRotator } from "./components/QuoteRotator";
 
-type Card = {
-  title: string;
-  href: string;
-  imageSrc: string;
-};
+const heroBackgroundImages: string[] = [
+  "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1773332585687-85beb4da71ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D",
+];
 
-const serviceCards: Card[] = [
+const serviceCards: SliderCard[] = [
   {
     title: "AI / ML Development",
     href: "#services",
@@ -47,7 +49,7 @@ const serviceCards: Card[] = [
   },
 ];
 
-const solutionCards: Card[] = [
+const solutionCards: SliderCard[] = [
   {
     title: "Digital Transformation",
     href: "#solutions",
@@ -98,38 +100,15 @@ const solutionCards: Card[] = [
   },
 ];
 
-function ImageCard({ title, href, imageSrc }: Card) {
-  return (
-    <Link
-      href={href}
-      className="group relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-    >
-      <div className="relative aspect-[4/3] w-full">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          className="object-cover transition duration-500 group-hover:scale-[1.03]"
-          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-5">
-          <p className="text-base font-semibold text-white">{title}</p>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
 export default function Home() {
   return (
     <div className="bg-background">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_20%_10%,color-mix(in_oklab,var(--primary)_20%,transparent),transparent_55%),radial-gradient(1000px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_18%,transparent),transparent_55%),linear-gradient(180deg,#050914_0%,#0b1530_60%,#060814_100%)]" />
-        <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/35" />
+        <HeroBackgroundSlider images={heroBackgroundImages} />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
 
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-20 text-white sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+        <div className="relative flex w-full flex-col items-center px-0 py-20 text-white sm:py-28 lg:py-32">
           <p className="rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-white/90 backdrop-blur">
             Enterprise IT Consulting • Alberta & Canada
           </p>
@@ -149,13 +128,13 @@ export default function Home() {
           <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <a
               href="#solutions"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black shadow-sm transition hover:bg-white/90"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
             >
               Explore Our Solutions
             </a>
             <Link
               href="/get-a-quote"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white shadow-sm backdrop-blur transition hover:bg-white/15"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
             >
               Get a Quote
             </Link>
@@ -165,11 +144,11 @@ export default function Home() {
 
       <section
         id="what-we-do"
-        className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+        className="w-full px-4 py-16 lg:py-20"
       >
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
-            <div className="relative aspect-[16/11] w-full">
+          <div className="relative overflow-hidden border border-border bg-surface shadow-sm">
+            <div className="relative aspect-[16/9] w-full">
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
                 alt="Technology consulting team collaboration"
@@ -185,10 +164,10 @@ export default function Home() {
             <p className="text-xs font-semibold tracking-widest text-muted-foreground">
               WHAT WE DO
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               Our Technology Services
             </h2>
-            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
+            <p className="mt-5 text-lg leading-7 text-muted-foreground sm:text-xl">
               Fusion Byte provides enterprise-grade IT consulting and technology
               solutions including AI/ML development, cloud consulting,
               cybersecurity, digital transformation, software modernization,
@@ -203,13 +182,13 @@ export default function Home() {
         id="services"
         className="bg-surface-2/60 py-16 sm:py-20"
       >
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <div>
               <p className="text-xs font-semibold tracking-widest text-muted-foreground">
                 SERVICES
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
                 Our Core Services
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
@@ -223,42 +202,38 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {serviceCards.map((c) => (
-              <ImageCard key={c.title} {...c} />
-            ))}
+          <div className="mt-10">
+            <CardSlider cards={serviceCards} />
           </div>
         </div>
       </section>
 
       <section id="solutions" className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4">
           <p className="text-xs font-semibold tracking-widest text-muted-foreground">
             SOLUTIONS
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             Our Technology Solutions
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
            
           </p>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {solutionCards.map((c) => (
-              <ImageCard key={c.title} {...c} />
-            ))}
+          <div className="mt-10">
+            <CardSlider cards={solutionCards} />
           </div>
         </div>
       </section>
 
       <section id="who-we-are" className="bg-surface-2/60 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4">
           <div className="grid items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold tracking-widest text-muted-foreground">
                 WHO WE ARE
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
                 Who We Are
               </h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
@@ -271,7 +246,7 @@ export default function Home() {
             <div className="lg:col-span-5 lg:flex lg:justify-end">
               <a
                 href="#contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-sm transition hover:bg-foreground/90"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
               >
                 Learn More About Us
               </a>
@@ -281,13 +256,13 @@ export default function Home() {
       </section>
 
       <section id="careers" className="py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="w-full ">
+          <div className="grid gap-10 px-4 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="text-xs font-semibold tracking-widest text-muted-foreground">
                 CAREERS
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
                 Build With a Modern Team
               </h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
@@ -338,10 +313,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/55" />
         </div>
 
-        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+        <div className="relative w-full px-0">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center px-4">
             <div className="lg:col-span-7">
-              <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
                 Ready to Start Your Digital Transformation?
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
@@ -354,13 +329,13 @@ export default function Home() {
               <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-end">
                 <a
                   href="#contact"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black shadow-sm transition hover:bg-white/90"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
                 >
                   Contact Us
                 </a>
                 <Link
                   href="/get-a-quote"
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white shadow-sm backdrop-blur transition hover:bg-white/15"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
                 >
                   Get a Quote
                 </Link>

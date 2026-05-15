@@ -41,7 +41,7 @@ export function PageHero({
             {primaryCta ? (
               <Link
                 href={primaryCta.href}
-                className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black shadow-sm transition hover:bg-white/90"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
               >
                 {primaryCta.label}
               </Link>
@@ -49,7 +49,7 @@ export function PageHero({
             {secondaryCta ? (
               <Link
                 href={secondaryCta.href}
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 text-sm font-semibold text-white shadow-sm backdrop-blur transition hover:bg-white/15"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
               >
                 {secondaryCta.label}
               </Link>
@@ -60,4 +60,3 @@ export function PageHero({
     </section>
   );
 }
-

@@ -24,8 +24,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-surface/85 backdrop-blur supports-[backdrop-filter]:bg-surface/70">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black text-white">
+      <div className="flex w-full items-center justify-between gap-4 px-4 py-3">
    <Link href="/" className="flex items-center gap-2">
   <Image
     src="/logo.jpeg"
@@ -33,11 +33,11 @@ export function Header() {
     height={0}
     sizes="100vw"
     alt="Logo"
-    className="w-52 h-auto"
+    className="w-56 h-auto"
   />
 </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-foreground/90 lg:flex">
+        <nav className="hidden items-center gap-7 text-sm font-medium text-white/90 lg:flex">
           <MegaMenu
             label="What We Do"
             groups={whatWeDoMegaMenu}
@@ -74,7 +74,7 @@ export function Header() {
           <SimpleMenu label="Careers" items={careersMenu} />
           <Link
             href="/contact-us"
-            className="rounded-md px-2 py-1 transition-colors hover:text-foreground"
+            className="rounded-md px-2 py-1 transition-colors hover:text-white"
           >
             Contact Us
           </Link>
@@ -90,7 +90,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-border bg-surface px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-surface-2 lg:hidden"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 lg:hidden"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav"
             onClick={() => setIsMenuOpen((v) => !v)}
@@ -104,24 +104,24 @@ export function Header() {
       </div>
 
       {isMenuOpen ? (
-        <div id="mobile-nav" className="border-t border-border lg:hidden">
-          <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <div id="mobile-nav" className="border-t border-white/10 lg:hidden">
+          <div className="w-full px-0 py-4">
             <div className="flex flex-col gap-2">
-              <details className="rounded-xl border border-border bg-surface">
-                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-foreground">
+              <details className="rounded-xl border border-white/10 bg-black">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-white">
                   What We Do
                 </summary>
                 <div className="space-y-4 px-4 pb-4">
                   <Link
                     href="/what-we-do"
-                    className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                    className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Overview
                   </Link>
                   {whatWeDoMegaMenu.map((group) => (
                     <div key={group.title}>
-                      <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+                      <p className="text-xs font-semibold tracking-widest text-white/70">
                         {group.title.toUpperCase()}
                       </p>
                       <div className="mt-2 space-y-1">
@@ -129,7 +129,7 @@ export function Header() {
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                            className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {item.title}
@@ -141,21 +141,21 @@ export function Header() {
                 </div>
               </details>
 
-              <details className="rounded-xl border border-border bg-surface">
-                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-foreground">
+              <details className="rounded-xl border border-white/10 bg-black">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-white">
                   Solutions
                 </summary>
                 <div className="px-4 pb-4">
                   <Link
                     href="/solutions"
-                    className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                    className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Overview
                   </Link>
                   {solutionsMegaMenu.map((group) => (
                     <div key={group.title} className="mt-4">
-                      <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+                      <p className="text-xs font-semibold tracking-widest text-white/70">
                         {group.title.toUpperCase()}
                       </p>
                       <div className="mt-2 space-y-1">
@@ -163,7 +163,7 @@ export function Header() {
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                            className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {item.title}
@@ -175,21 +175,21 @@ export function Header() {
                 </div>
               </details>
 
-              <details className="rounded-xl border border-border bg-surface">
-                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-foreground">
+              <details className="rounded-xl border border-white/10 bg-black">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-white">
                   Who We Are
                 </summary>
                 <div className="px-4 pb-4">
                   <Link
                     href="/who-we-are"
-                    className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                    className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Overview
                   </Link>
                   {whoWeAreMegaMenu.map((group) => (
                     <div key={group.title} className="mt-4">
-                      <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+                      <p className="text-xs font-semibold tracking-widest text-white/70">
                         {group.title.toUpperCase()}
                       </p>
                       <div className="mt-2 space-y-1">
@@ -197,7 +197,7 @@ export function Header() {
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                            className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {item.title}
@@ -209,8 +209,8 @@ export function Header() {
                 </div>
               </details>
 
-              <details className="rounded-xl border border-border bg-surface">
-                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-foreground">
+              <details className="rounded-xl border border-white/10 bg-black">
+                <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-white">
                   Careers
                 </summary>
                 <div className="px-4 pb-4">
@@ -218,7 +218,7 @@ export function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-surface-2"
+                      className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.title}
@@ -229,7 +229,7 @@ export function Header() {
 
               <Link
                 href="/contact-us"
-                className="rounded-xl px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface-2"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us

@@ -10,7 +10,7 @@
   --muted-foreground: #475569;
 
   /* Brand */
-  --primary: #0b4bd4;
+  --primary: #ef4444;
   --primary-foreground: #ffffff;
   --accent: #14b8a6;
   --accent-foreground: #062a27;
@@ -43,8 +43,8 @@
     --muted: rgba(148, 163, 184, 0.16);
     --muted-foreground: #cbd5e1;
 
-    --primary: #5aa2ff;
-    --primary-foreground: #06101e;
+    --primary: #ef4444;
+    --primary-foreground: #ffffff;
     --accent: #2dd4bf;
     --accent-foreground: #062a27;
   }
