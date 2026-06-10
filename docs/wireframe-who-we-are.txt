@@ -1,0 +1,160 @@
+﻿| PAGE: WHO WE ARE                                                                                               |
+====================================================================================================================
+
+| GLOBAL HEADER                                                                                                   |
+
+
+
+
+====================================================================================================================
+| HERO SECTION â€” FULL WIDTH BANNER                                                                                |
+====================================================================================================================
+| Background: Modern enterprise tech visuals / digital transformation animation                                   |
+|                                                                                                                |
+| H1: About FusionByte IT Consultation and Solutions                                                             |
+|                                                                                                                |
+| Subheading:                                                                                                     |
+| An Alberta-Based Technology Consulting Company Delivering AI, Cloud, Cybersecurity, Software Modernization, and Digital Transformation Solutions.                                   |
+|                                                                                                                |
+|
+|                                                                                                                |
+| CTA BUTTONS:                                                                                                     |
+| [ Explore Our Services ]                                                                                        |
+| [ Get a Quote ]                                                                                                 |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: COMPANY OVERVIEW                                                                                      |
+====================================================================================================================
+| H2: Who We Are                                                                                                  |
+|                                                                                                                |
+| IMAGE: Corporate technology team / strategy meeting / enterprise collaboration                                 |
+|                                                                                                                |
+| PARAGRAPH (SEO OPTIMIZED):                                                                                     |
+| Fusion Byte IT Consultation and Solutions is a technology-focused consulting company based in Alberta, Canada, dedicated to delivering enterprise-grade digital solutions for organizations seeking innovation, scalability, and operational efficiency. We specialize in AI/ML development, cloud consulting services, cybersecurity solutions, software modernization, digital marketing strategies, blockchain development, and political campaign technology support. Our approach combines structured planning, technical expertise, and scalable architecture to help businesses achieve digital transformation goals. We focus on building reliable, secure, and future-ready technology systems that support long-term growth.                                    |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: OUR MISSION                                                                                            |
+====================================================================================================================
+| H2: Our Mission                                                                                                 |
+|                                                                                                                |
+| IMAGE: Technology roadmap / digital strategy diagram                                                          |
+|                                                                                                                |
+| PARAGRAPH:                                                                                                      |
+| Our mission is to deliver high-quality technology consulting and implementation services that empower organizations to modernize their systems, strengthen cybersecurity, adopt cloud technologies, integrate artificial intelligence, and improve overall digital performance. We are committed to providing structured, secure, and scalable solutions that align with business objectives and industry best practices.                                               |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: OUR VISION                                                                                             |
+====================================================================================================================
+| H2: Our Vision                                                                                                  |
+|                                                                                                                |
+| IMAGE: Futuristic enterprise technology environment                                                           |
+|                                                                                                                |
+| PARAGRAPH:                                                                                                      |
+| Our vision is to become a trusted technology partner for businesses across Canada by delivering innovative, secure, and scalable digital transformation solutions. We aim to support organizations in adopting advanced technologies, improving operational efficiency, and building resilient systems that enable sustainable growth in a competitive digital landscape.                                                                                            |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: OUR VALUES                                                                                             |
+====================================================================================================================
+| H2: Our Core Values                                                                                            |
+|                                                                                                                |
+| GRID (ICON CARDS)                                                                                              |
+|                                                                                                                |
+| CARD 1: Innovation                                                                                            |
+| Driving forward-thinking technology solutions.                                                                |
+|                                                                                                                |
+| CARD 2: Security-First Approach                                                                                |
+| Designing systems with enterprise-level protection.                                                           |
+|                                                                                                                |
+| CARD 3: Scalability                                                                                             |
+| Building solutions that grow with your business.                                                              |
+|                                                                                                                |
+| CARD 4: Integrity                                                                                               |
+| Transparent processes and structured delivery.                                                                |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: OUR EXPERTISE                                                                                          |
+====================================================================================================================
+| H2: Areas of Expertise                                                                                          |
+|                                                                                                                |
+| IMAGE GRID WITH TITLES ONLY                                                                                    |
+|                                                                                                                |
+| - Artificial Intelligence & Machine Learning                                                                   |
+| - Cloud Consulting & Optimization                                                                               |
+| - Cybersecurity & Risk Management                                                                               |
+| - Custom Software Development                                                                                  |
+| - Digital Transformation Strategy                                                                               |
+| - Blockchain Solutions                                                                                          |
+| - Digital Marketing Technology                                                                                  |
+| - Enterprise System Modernization                                                                                |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: WHY CHOOSE FUSIONBYTE                                                                                  |
+====================================================================================================================
+| H2: Why Organizations Work With Us                                                                             |
+|                                                                                                                |
+| 4 VALUE POINTS                                                                                                  |
+|                                                                                                                |
+| âœ” Enterprise-Level Technical Expertise                                                                          |
+| âœ” Structured Consulting Approach                                                                                |
+| âœ” Secure & Scalable Architectures                                                                               |
+| âœ” Long-Term Technology Partnership                                                                               |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: STRATEGIC APPROACH                                                                                    |
+====================================================================================================================
+| H2: Our Consulting Methodology                                                                                  |
+|                                                                                                                |
+| STEP FLOW                                                                                                       |
+|                                                                                                                |
+| Step 1: Requirement Analysis                                                                                   |
+| Step 2: Strategic Planning                                                                                      |
+| Step 3: Solution Design                                                                                         |
+| Step 4: Implementation & Deployment                                                                              |
+| Step 5: Optimization & Ongoing Support                                                                           |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| FINAL CTA SECTION                                                                                               |
+====================================================================================================================
+| Background: Modern collaboration + digital transformation visuals                                              |
+|                                                                                                                |
+| H2: Partner With FusionByte for Your Next Technology Initiative                                                |
+|                                                                                                                |
+| Subtext:                                                                                                        |
+| Connect with our team to discuss enterprise solutions, project requirements, or long-term digital transformation strategies.                                                   |
+|                                                                                                                |
+| BUTTONS:                                                                                                       |
+| [ Contact Us ]                                                                                                  |
+| [ Get a Quote ]                                                                                                 |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| FOOTER                                                                                                          |
+================
+ðŸ§¾ FUSIONBYTE IT â€” CAREERS PAGE WIREFRAME
+====================================================================================================================

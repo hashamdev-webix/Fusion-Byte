@@ -11,40 +11,6 @@ export type NavGroup = {
 
 export const whatWeDoMegaMenu: NavGroup[] = [
   {
-    title: "Digital Transformation",
-    items: [
-      {
-        title: "Strategy Consulting",
-        href: "/what-we-do/digital-transformation/strategy-consulting",
-      },
-      {
-        title: "Process Optimization",
-        href: "/what-we-do/digital-transformation/process-optimization",
-      },
-      {
-        title: "Technology Roadmapping",
-        href: "/what-we-do/digital-transformation/technology-roadmapping",
-      },
-    ],
-  },
-  {
-    title: "Custom Software Development",
-    items: [
-      {
-        title: "Enterprise Software",
-        href: "/what-we-do/custom-software-development/enterprise-software",
-      },
-      {
-        title: "Web Applications",
-        href: "/what-we-do/custom-software-development/web-applications",
-      },
-      {
-        title: "System Architecture",
-        href: "/what-we-do/custom-software-development/system-architecture",
-      },
-    ],
-  },
-  {
     title: "AI / ML Development",
     items: [
       {

@@ -1,6 +1,19 @@
-"use client";
-
+import Link from "next/link";
 import { PageHero } from "../components/PageHero";
+
+const projectTypes = [
+  "AI / ML Development",
+  "Cloud Consulting",
+  "Cyber Security",
+  "Software Modernization",
+  "Digital Marketing",
+  "Blockchain Solutions",
+  "Political Campaign Technology",
+  "General IT Consulting",
+] as const;
+
+const budgets = ["Under $10,000", "$10,000 – $50,000", "$50,000 – $100,000", "$100,000+"] as const;
+const timelines = ["ASAP", "1–3 Months", "3–6 Months", "Flexible"] as const;
 
 export default function Page() {
   return (
@@ -10,7 +23,6 @@ export default function Page() {
         title="Request a Custom Technology Quote"
         description="Tell us about your project and our team will provide a structured proposal for AI development, cloud consulting, cybersecurity, software modernization, digital transformation, or enterprise technology solutions."
         primaryCta={{ label: "Start Your Project", href: "#quote" }}
-        secondaryCta={{ label: "Contact Us", href: "/contact-us" }}
       />
 
       <section
@@ -21,17 +33,13 @@ export default function Page() {
           <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
             Tell Us About Your Project
           </h2>
-          <p className="mt-3 text-sm leading-6 text-muted-foreground">
-            This form is a front-end placeholder (submission wiring can be added
-            next).
-          </p>
 
           <form className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
-              { label: "Full Name *", type: "text", span: 1 },
-              { label: "Email Address *", type: "email", span: 1 },
-              { label: "Phone Number", type: "tel", span: 1 },
-              { label: "Company Name", type: "text", span: 1 },
+              { label: "Full Name *", type: "text" },
+              { label: "Email Address *", type: "email" },
+              { label: "Phone Number", type: "tel" },
+              { label: "Company Name", type: "text" },
             ].map((f) => (
               <label key={f.label} className="block">
                 <span className="text-xs font-semibold text-foreground">
@@ -50,16 +58,7 @@ export default function Page() {
                 Project Type *
               </span>
               <select className="mt-2 h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm text-foreground shadow-sm outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20">
-                {[
-                  "AI / ML Development",
-                  "Cloud Consulting",
-                  "Cyber Security",
-                  "Software Modernization",
-                  "Digital Marketing",
-                  "Blockchain Solutions",
-                  "Political Campaign Technology",
-                  "General IT Consulting",
-                ].map((o) => (
+                {projectTypes.map((o) => (
                   <option key={o} value={o}>
                     {o}
                   </option>
@@ -72,12 +71,7 @@ export default function Page() {
                 Project Budget Range
               </span>
               <select className="mt-2 h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm text-foreground shadow-sm outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20">
-                {[
-                  "Under $10,000",
-                  "$10,000 – $50,000",
-                  "$50,000 – $100,000",
-                  "$100,000+",
-                ].map((o) => (
+                {budgets.map((o) => (
                   <option key={o} value={o}>
                     {o}
                   </option>
@@ -90,7 +84,7 @@ export default function Page() {
                 Project Timeline
               </span>
               <select className="mt-2 h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm text-foreground shadow-sm outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20">
-                {["ASAP", "1–3 Months", "3–6 Months", "Flexible"].map((o) => (
+                {timelines.map((o) => (
                   <option key={o} value={o}>
                     {o}
                   </option>
@@ -104,7 +98,7 @@ export default function Page() {
               </span>
               <textarea
                 className="mt-2 min-h-32 w-full rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground shadow-sm outline-none placeholder:text-muted-foreground focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
-                placeholder="Describe what you want to build."
+                placeholder="Project description"
               />
             </label>
 
@@ -141,11 +135,90 @@ export default function Page() {
               >
                 Submit Request
               </button>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Submission wiring can be added to send emails / store leads.
-              </p>
             </div>
           </form>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          What Happens After You Submit
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { title: "Project Review", text: "Our team reviews your requirements." },
+            {
+              title: "Consultation Call",
+              text: "We schedule a discussion to understand your goals.",
+            },
+            {
+              title: "Proposal Preparation",
+              text: "We prepare a structured technical and pricing proposal.",
+            },
+            {
+              title: "Agreement & Kickoff",
+              text: "Once approved, we begin project implementation.",
+            },
+          ].map((s) => (
+            <div
+              key={s.title}
+              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+            >
+              <p className="text-sm font-semibold text-foreground">{s.title}</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                {s.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          Why Work With Us
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            "Enterprise-Level Expertise",
+            "Secure & Scalable Architecture",
+            "Structured Consulting Process",
+            "Long-Term Technology Partnership",
+            "Alberta-Based Company",
+            "Canada-Focused Solutions",
+          ].map((t) => (
+            <div
+              key={t}
+              className="rounded-3xl border border-border bg-surface p-6 text-sm text-muted-foreground shadow-sm"
+            >
+              <p className="font-semibold text-foreground">{t}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            Prefer to Speak With Us Directly?
+          </h2>
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
+            You can also reach our team by phone or email for immediate
+            consultation regarding your project requirements.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/contact-us"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/what-we-do"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-border bg-surface px-6 text-sm font-semibold text-foreground shadow-sm transition hover:bg-surface-2"
+            >
+              View Services
+            </Link>
+          </div>
         </div>
       </section>
     </div>

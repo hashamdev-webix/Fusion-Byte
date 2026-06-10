@@ -1,57 +1,127 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "../components/PageHero";
-import { whatWeDoMegaMenu } from "../components/nav";
+import {
+  whatWeDoFinalCta,
+  whatWeDoHero,
+  whatWeDoSections,
+  whatWeDoWhyChoose,
+} from "../content/siteCopy";
 
 export default function Page() {
   return (
     <div className="bg-background">
-      <PageHero
-        eyebrow="WHAT WE DO"
-        title="Enterprise Technology Solutions for Digital Transformation"
-        description="Fusion Byte delivers AI/ML, cloud, cybersecurity, software modernization, digital marketing technology, blockchain, and political campaign technology services—built for secure, scalable enterprise outcomes."
-        primaryCta={{ label: "Request a Service", href: "/get-a-quote" }}
-        secondaryCta={{ label: "Explore Solutions", href: "/solutions" }}
-      />
+      <PageHero {...whatWeDoHero} />
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-          Service Areas
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
-          Browse our service categories and the detailed offerings under each.
-        </p>
+      {whatWeDoSections.map((section) => (
+        <section
+          key={section.id}
+          id={section.id}
+          className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
+        >
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-6">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
+                {section.imageSrc ? (
+                  <>
+                    <Image
+                      src={section.imageSrc}
+                      alt={section.title}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                  </>
+                ) : null}
+              </div>
+            </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {whatWeDoMegaMenu.map((group) => (
-            <div
-              key={group.title}
-              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
-            >
-              <p className="text-sm font-semibold text-foreground">
-                {group.title}
+            <div className="lg:col-span-6">
+              <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+                WHAT WE DO
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                {group.items.map((item) => (
-                  <li key={item.href}>
-                    <Link className="hover:text-foreground" href={item.href}>
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                {section.title}
+              </h2>
+              <p className="mt-5 text-base leading-7 text-muted-foreground">
+                {section.description}
+              </p>
+              {section.cta ? (
+                <div className="mt-8">
+                  <Link
+                    href={section.cta.href}
+                    className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+                  >
+                    {section.cta.label}
+                  </Link>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <section
+        id="why-choose-fusionbyte"
+        className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
+      >
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          {whatWeDoWhyChoose.title}
+        </h2>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {whatWeDoWhyChoose.points.map((p) => (
+            <div
+              key={p}
+              className="rounded-3xl border border-border bg-surface p-6 text-sm text-muted-foreground shadow-sm"
+            >
+              <p className="font-semibold text-foreground">{p}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-16 sm:py-20">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80"
+            alt="Modern tech collaboration"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+
+        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                {whatWeDoFinalCta.title}
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
+                {whatWeDoFinalCta.description}
+              </p>
+            </div>
+            <div className="lg:col-span-5 lg:flex lg:justify-end">
+              <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-end">
                 <Link
-                  href={group.items[0]?.href ?? "/get-a-quote"}
-                  className="inline-flex h-10 items-center justify-center rounded-full border border-border bg-surface px-4 text-sm font-medium text-foreground shadow-sm transition hover:bg-surface-2"
+                  href={whatWeDoFinalCta.primary.href}
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
                 >
-                  View details
+                  {whatWeDoFinalCta.primary.label}
+                </Link>
+                <Link
+                  href={whatWeDoFinalCta.secondary.href}
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+                >
+                  {whatWeDoFinalCta.secondary.label}
                 </Link>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </section>
     </div>
   );
 }
-

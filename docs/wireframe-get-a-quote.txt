@@ -1,0 +1,138 @@
+﻿| PAGE: GET A QUOTE                                                                                               |
+====================================================================================================================
+
+| GLOBAL HEADER                                                                                                   |
+=============================================================================
+
+
+
+====================================================================================================================
+| HERO BANNER (FULL WIDTH)                                                                                        |
+====================================================================================================================
+| Background: Professional technology / enterprise collaboration visuals                                         |
+|                                                                                                                |
+| H1: Request a Custom Technology Quote                                                                          |
+|                                                                                                                |
+| Subheading:                                                                                                     |
+| Tell us about your project and our team will provide a structured proposal for AI development, cloud consulting, cybersecurity, software modernization, digital transformation, or enterprise technology solutions.                                                                                           |
+|                                                                                                                |
+|                                                                                                                |
+| CTA BUTTON:                                                                                                     |
+| [ Start Your Project ]                                                                                          |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: PROJECT INFORMATION FORM (MAIN CONVERSION AREA)                                                        |
+====================================================================================================================
+| H2: Tell Us About Your Project                                                                                  |
+|                                                                                                                |
+| FORM LAYOUT (FULL WIDTH OR CENTERED CARD)                                                                       |
+|                                                                                                                |
+| Full Name *                                                                                                     |
+| [ Input ]                                                                                                       |
+|                                                                                                                |
+| Email Address *                                                                                                |
+| [ Input ]                                                                                                       |
+|                                                                                                                |
+| Phone Number                                                                                                   |
+| [ Input ]                                                                                                       |
+|                                                                                                                |
+| Company Name                                                                                                   |
+| [ Input ]                                                                                                       |
+|                                                                                                                |
+| Project Type *                                                                                                 |
+| [ Dropdown ]                                                                                                   |
+| - AI / ML Development                                                                                          |
+| - Cloud Consulting                                                                                             |
+| - Cyber Security                                                                                                |
+| - Software Modernization                                                                                        |
+| - Digital Marketing                                                                                             |
+| - Blockchain Solutions                                                                                          |
+| - Political Campaign Technology                                                                                 |
+| - General IT Consulting                                                                                         |
+|                                                                                                                |
+| Project Budget Range                                                                                            |
+| [ Dropdown ]                                                                                                   |
+| - Under $10,000                                                                                                 |
+| - $10,000 â€“ $50,000                                                                                            |
+| - $50,000 â€“ $100,000                                                                                           |
+| - $100,000+                                                                                                     |
+|                                                                                                                |
+| Project Timeline                                                                                               |
+| [ Dropdown ]                                                                                                   |
+| - ASAP                                                                                                          |
+| - 1â€“3 Months                                                                                                    |
+| - 3â€“6 Months                                                                                                   |
+| - Flexible                                                                                                      |
+|                                                                                                                |
+| Project Description *                                                                                          |
+| [ Large Text Area ]                                                                                            |
+|                                                                                                                |
+| File Upload (Optional)                                                                                         |
+| [ Upload Documents / Requirements ]                                                                            |
+|                                                                                                                |
+| Preferred Contact Method                                                                                        |
+| ( ) Email                                                                                                       |
+| ( ) Phone                                                                                                       |
+|                                                                                                                |
+| [ Submit Request ]                                                                                              |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: WHAT HAPPENS NEXT                                                                                      |
+====================================================================================================================
+| H2: What Happens After You Submit                                                                               |
+|                                                                                                                |
+| STEP 1: Project Review                                                                                          |
+| Our team reviews your requirements.                                                                             |
+|                                                                                                                |
+| STEP 2: Consultation Call                                                                                       |
+| We schedule a discussion to understand your goals.                                                             |
+|                                                                                                                |
+| STEP 3: Proposal Preparation                                                                                    |
+| We prepare a structured technical and pricing proposal.                                                         |
+|                                                                                                                |
+| STEP 4: Agreement & Kickoff                                                                                     |
+| Once approved, we begin project implementation.                                                                 |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: WHY REQUEST A QUOTE FROM FUSIONBYTE                                                                    |
+====================================================================================================================
+| H2: Why Work With Us                                                                                            |
+|                                                                                                                |
+| ICON GRID:                                                                                                      |
+| âœ” Enterprise-Level Expertise                                                                                    |
+| âœ” Secure & Scalable Architecture                                                                                |
+| âœ” Structured Consulting Process                                                                                  |
+| âœ” Long-Term Technology Partnership                                                                               |
+| âœ” Alberta-Based Company                                                                                          |
+| âœ” Canada-Focused Solutions                                                                                       |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: ALTERNATIVE CONTACT OPTION                                                                             |
+====================================================================================================================
+| H2: Prefer to Speak With Us Directly?                                                                           |
+|                                                                                                                |
+| Text:                                                                                                           |
+| You can also reach our team by phone or email for immediate                                                |
+| consultation regarding your project requirements.                                                             |
+|                                                                                                                |
+| BUTTONS:                                                                                                       |
+| [ Contact Us ]                                                                                                  |
+| [ View Services ]                                                                                                |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| FOOTER                                                                                                          |

@@ -1,0 +1,227 @@
+﻿| PAGE: CAREERS                                                                                                   |
+====================================================================================================================
+
+
+
+
+
+====================================================================================================================
+| HERO BANNER (FULL WIDTH)                                                                                        |
+====================================================================================================================
+| Background: Modern tech team / office collaboration / innovation visuals                                        |
+|                                                                                                                |
+| H1: Build Your Career in Technology & Innovation                                                               |
+|                                                                                                                |
+| Subheading:                                                                                                     |
+| Join FusionByte IT Consultation and Solutions and work on AI, Cloud,                                         |
+| Cybersecurity, Digital Transformation, and Enterprise Technology projects                                      |
+| across Alberta and Canada.                                                                                      |
+|                                                                                                                |
+|                                                                                                                |
+| PRIMARY CTA:                                                                                                    |
+| [ Join Us Today ]                                                                                               |
+====================================================================================================================
+
+
+
+====================================================================================================================
+| SECTION: CURRENT OPENINGS (CARDS GRID)                                                                          |
+====================================================================================================================
+| H2: Open Positions                                                                                              |
+|                                                                                                                |
+| CARD 1                                                                                                          |
+| [ IMAGE ]                                                                                                       |
+| Title: AI / ML Developer                                                                                         |
+| Button: Learn More â†’ Scrolls to Section Below                                                                  |
+|                                                                                                                |
+| CARD 2                                                                                                          |
+| [ IMAGE ]                                                                                                       |
+| Title: Cloud Solutions Engineer                                                                                  |
+| Button: Learn More â†’ Scrolls to Section Below                                                                  |
+|                                                                                                                |
+| CARD 3                                                                                                          |
+| [ IMAGE ]                                                                                                       |
+| Title: Cyber Security Analyst                                                                                    |
+| Button: Learn More â†’ Scrolls to Section Below                                                                  |
+====================================================================================================================
+
+
+
+####################################################################################################################
+# JOB SECTION 1 â€” AI / ML DEVELOPER                                                                                #
+####################################################################################################################
+
+LEFT SIDE (JOB DETAILS)
+
+H2: AI / ML Developer
+
+Overview:
+Fusion Byte is seeking an AI/ML Developer to design, develop, and deploy
+intelligent systems, predictive models, and automation solutions.
+This role involves working on artificial intelligence frameworks,
+data modeling, machine learning pipelines, and enterprise integrations.
+
+Responsibilities:
+- Develop and train machine learning models
+- Work with structured and unstructured data
+- Build AI-powered automation systems
+- Integrate AI solutions into enterprise applications
+- Optimize model performance and scalability
+
+Requirements:
+- Experience in Python and AI frameworks
+- Understanding of machine learning concepts
+- Knowledge of data processing and model deployment
+- Strong problem-solving skills
+
+Why Join Us:
+- Work on advanced AI projects
+- Growth-focused environment
+- Enterprise-level technology exposure
+
+RIGHT SIDE (APPLICATION FORM)
+
+Apply for this Position
+
+Full Name *
+[ Input ]
+
+Email Address *
+[ Input ]
+
+Phone Number *
+[ Input ]
+
+Resume Upload (PDF/Word)
+[ Upload File ]
+
+Cover Letter
+[ Text Area ]
+
+[ Submit Application ]
+
+####################################################################################################################
+
+
+
+####################################################################################################################
+# JOB SECTION 2 â€” CLOUD SOLUTIONS ENGINEER                                                                         #
+####################################################################################################################
+
+LEFT SIDE (JOB DETAILS)
+
+H2: Cloud Solutions Engineer
+
+Overview:
+We are hiring a Cloud Solutions Engineer to design, implement,
+and optimize cloud infrastructure for enterprise clients.
+The role focuses on cloud migration, architecture planning,
+performance optimization, and secure deployments.
+
+Responsibilities:
+- Design cloud-based architectures
+- Perform cloud migrations
+- Optimize cloud performance
+- Implement security best practices
+- Work with hybrid environments
+
+Requirements:
+- Experience with cloud platforms
+- Knowledge of infrastructure design
+- Understanding of security and scalability
+- Strong technical background
+
+Why Join Us:
+- Work on large-scale infrastructure
+- Enterprise consulting exposure
+- Innovative project environment
+
+RIGHT SIDE (APPLICATION FORM)
+
+Apply for this Position
+
+Full Name *
+[ Input ]
+
+Email Address *
+[ Input ]
+
+Phone Number *
+[ Input ]
+
+Resume Upload
+[ Upload File ]
+
+Cover Letter
+[ Text Area ]
+
+[ Submit Application ]
+
+####################################################################################################################
+
+
+
+####################################################################################################################
+# JOB SECTION 3 â€” CYBER SECURITY ANALYST                                                                            #
+####################################################################################################################
+
+LEFT SIDE (JOB DETAILS)
+
+H2: Cyber Security Analyst
+
+Overview:
+Fusion Byte is looking for a Cyber Security Analyst to support
+risk assessments, vulnerability analysis, security monitoring,
+and enterprise protection strategies for clients across Canada.
+
+Responsibilities:
+- Conduct security audits
+- Identify vulnerabilities
+- Monitor threats and system logs
+- Implement security improvements
+- Support compliance initiatives
+
+Requirements:
+- Knowledge of cybersecurity frameworks
+- Understanding of risk management
+- Analytical mindset
+- Security tools experience
+
+Why Join Us:
+- Work in security-first environment
+- Exposure to enterprise clients
+- Career growth in cybersecurity
+
+RIGHT SIDE (APPLICATION FORM)
+
+Apply for this Position
+
+Full Name *
+[ Input ]
+
+Email Address *
+[ Input ]
+
+Phone Number *
+[ Input ]
+
+Resume Upload
+[ Upload File ]
+
+Cover Letter
+[ Text Area ]
+
+[ Submit Application ]
+
+####################################################################################################################
+
+
+
+
+
+
+
+====================================================================================================================
+| FOOTER
+ðŸ§¾ FUSIONBYTE IT â€” CONTACT US PAGE WIREFRAME
+====================================================================================================================

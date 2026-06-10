@@ -255,6 +255,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="process" className="py-16 sm:py-20">
+        <div className="w-full px-4">
+          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+            PROCESS
+          </p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            How Our Process Works
+          </h2>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              {
+                title: "Submit Your Request",
+                description: "User clicks “Get a Quote” or contacts us.",
+              },
+              {
+                title: "Consultation & Requirement Analysis",
+                description: "Our team reviews your project needs and goals.",
+              },
+              {
+                title: "Proposal & Solution Design",
+                description:
+                  "We present a structured plan with timeline and cost.",
+              },
+              {
+                title: "Project Execution",
+                description:
+                  "Development, implementation, testing, and delivery.",
+              },
+              {
+                title: "Support & Optimization",
+                description: "Ongoing improvements and technical support.",
+              },
+            ].map((s, idx) => (
+              <div
+                key={s.title}
+                className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="grid size-9 flex-none place-items-center rounded-full bg-muted text-sm font-semibold text-foreground">
+                    {idx + 1}
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">
+                      {s.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                      {s.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="careers" className="py-16 sm:py-20">
         <div className="w-full ">
           <div className="grid gap-10 px-4 lg:grid-cols-2 lg:items-center">

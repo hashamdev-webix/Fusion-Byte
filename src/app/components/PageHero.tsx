@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
   eyebrow?: string;
   title: string;
   description?: string;
+  backgroundImageSrc?: string;
+  backgroundImageAlt?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 };
@@ -12,12 +15,30 @@ export function PageHero({
   eyebrow,
   title,
   description,
+  backgroundImageSrc,
+  backgroundImageAlt = "",
   primaryCta,
   secondaryCta,
 }: Props) {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(1100px_circle_at_20%_10%,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_55%),radial-gradient(900px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_16%,transparent),transparent_55%),linear-gradient(180deg,#050914_0%,#0b1530_60%,#060814_100%)]" />
+      {backgroundImageSrc ? (
+        <Image
+          src={backgroundImageSrc}
+          alt={backgroundImageAlt}
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+      ) : null}
+      <div
+        className={[
+          "absolute inset-0 bg-[radial-gradient(1100px_circle_at_20%_10%,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_55%),radial-gradient(900px_circle_at_80%_20%,color-mix(in_oklab,var(--accent)_16%,transparent),transparent_55%),linear-gradient(180deg,#050914_0%,#0b1530_60%,#060814_100%)]",
+          backgroundImageSrc ? "opacity-75 mix-blend-multiply" : "",
+        ].join(" ")}
+      />
+      {backgroundImageSrc ? <div className="absolute inset-0 bg-black/55" /> : null}
       <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/35" />
 

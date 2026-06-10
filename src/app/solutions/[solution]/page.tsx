@@ -1,88 +1,63 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "../../components/PageHero";
-import { solutionsMenu } from "../../components/nav";
+import { solutionsBySlug } from "../../content/siteCopy";
 
-function titleFor(solution: string) {
-  const href = `/solutions/${solution}`;
-  return solutionsMenu.find((s) => s.href === href)?.title ?? null;
-}
+type Props = { params: Promise<{ solution: string }> };
 
-export default async function Page(props: {
-  params: Promise<{ solution: string }>;
-}) {
-  const { solution } = await props.params;
-  const title = titleFor(solution);
-  if (!title) return notFound();
+export default async function Page({ params }: Props) {
+  const { solution } = await params;
+  const section = solutionsBySlug[solution];
+  if (!section) notFound();
 
   return (
     <div className="bg-background">
       <PageHero
-        eyebrow="SOLUTION"
-        title={title}
-        description="Outcome-driven solution design with structured delivery, measurable milestones, and enterprise-grade reliability."
-        primaryCta={{ label: "Get a Quote", href: "/get-a-quote" }}
-        secondaryCta={{ label: "Back to Solutions", href: "/solutions" }}
+        eyebrow="SOLUTIONS"
+        title={section.title}
+        description={section.description}
+        primaryCta={{ label: "Explore All Solutions", href: "/solutions" }}
+        secondaryCta={{ label: "Get a Quote", href: "/get-a-quote" }}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-8">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
             <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-              Overview
+              {section.title}
             </h2>
             <p className="mt-4 text-base leading-7 text-muted-foreground">
-              FusionByte delivers {title.toLowerCase()} as a structured program:
-              discovery, architecture, implementation, testing, and continuous
-              optimization—aligned to your business objectives and security
-              posture.
+              {section.description}
             </p>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {[
-                "Strategy & roadmap",
-                "Architecture & design",
-                "Implementation",
-                "Testing & QA",
-                "Deployment",
-                "Support & optimization",
-              ].map((t) => (
-                <div
-                  key={t}
-                  className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+            {section.cta ? (
+              <div className="mt-8">
+                <Link
+                  href={section.cta.href}
+                  className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
                 >
-                  <p className="text-sm font-semibold text-foreground">{t}</p>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                    Enterprise-first process designed for reliability and scale.
-                  </p>
-                </div>
-              ))}
-            </div>
+                  {section.cta.label}
+                </Link>
+              </div>
+            ) : null}
           </div>
 
-          <aside className="lg:col-span-4">
-            <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm">
-              <p className="text-sm font-semibold text-foreground">
-                Explore more
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                {solutionsMenu.map((s) => (
-                  <li key={s.href}>
-                    <Link
-                      href={s.href}
-                      className={
-                        s.title === title
-                          ? "font-semibold text-foreground"
-                          : "hover:text-foreground"
-                      }
-                    >
-                      {s.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div className="lg:col-span-6">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
+              {section.imageSrc ? (
+                <>
+                  <Image
+                    src={section.imageSrc}
+                    alt={section.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                </>
+              ) : null}
             </div>
-          </aside>
+          </div>
         </div>
       </section>
     </div>

@@ -31,7 +31,7 @@ export function CardSlider({ cards, className }: Props) {
     const el = scrollerRef.current;
     if (!el) return;
 
-    let speed = 0.5; // lower = smoother/slower
+    const speed = 0.5; // lower = smoother/slower
 
     const animate = () => {
       if (!isPaused) {
