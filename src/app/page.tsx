@@ -142,24 +142,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="what-we-do"
-        className="w-full px-4 py-16 lg:py-20"
-      >
+      <section id="what-we-do" className="w-full px-4 py-16 lg:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div className="relative overflow-hidden border border-border bg-surface shadow-sm">
-            <div className="relative aspect-[16/9] w-full">
+          {/* Image */}
+          <div className="mx-auto w-full max-w-md overflow-hidden border border-border bg-surface shadow-sm">
+            <div className="relative aspect-[4/3] w-full">
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
                 alt="Technology consulting team collaboration"
                 fill
                 className="object-cover"
-                sizes="(min-width: 1024px) 45vw, 100vw"
+                sizes="(min-width: 1024px) 35vw, 100vw"
                 priority
               />
             </div>
           </div>
 
+          {/* Text */}
           <div>
             <p className="text-xs font-semibold tracking-widest text-muted-foreground">
               WHAT WE DO
@@ -168,32 +167,37 @@ export default function Home() {
               Our Technology Services
             </h2>
             <p className="mt-5 text-lg leading-7 text-muted-foreground sm:text-xl">
-              Fusion Byte provides enterprise-grade IT consulting and technology
+              Fusion Byte provides enterprise-grade IT consulting and technology{" "}
+              <br />
               solutions including AI/ML development, cloud consulting,
+              <br />
               cybersecurity, digital transformation, software modernization,
-              digital marketing, and political campaign technology solutions
-              across Alberta and Canada.
+              <br /> digital marketing, and political campaign technology
+              solutions <br /> across Alberta and Canada.
             </p>
           </div>
         </div>
       </section>
 
-      <section
-        id="services"
-        className="bg-surface-2/60 py-16 sm:py-20"
-      >
+      <section id="services" className="bg-surface-2/60 py-16 sm:py-20">
         <div className="w-full px-4">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="flex flex-col items-center justify-center gap-6 ">
             <div>
-              <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+              <p className="text-lg ml-26 font-semibold tracking-widest text-muted-foreground">
                 SERVICES
               </p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
                 Our Core Services
               </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
-              </p>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base"></p>
             </div>
+          </div>
+
+          <div className="mt-10">
+            <CardSlider cards={serviceCards} />
+          </div>
+
+          <div className="mt-8 flex justify-center">
             <Link
               href="/get-a-quote"
               className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
@@ -201,24 +205,22 @@ export default function Home() {
               Get a Quote
             </Link>
           </div>
-
-          <div className="mt-10">
-            <CardSlider cards={serviceCards} />
-          </div>
         </div>
       </section>
 
       <section id="solutions" className="py-16 sm:py-20">
         <div className="w-full px-4">
-          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
-            SOLUTIONS
-          </p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Our Technology Solutions
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
-           
-          </p>
+          <div className="text-center">
+            <p className="text-lg font-semibold tracking-widest text-muted-foreground">
+              SOLUTIONS
+            </p>
+
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Our Technology Solutions
+            </h2>
+
+            <p className="mt-3 mx-auto max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base"></p>
+          </div>
 
           <div className="mt-10">
             <CardSlider cards={solutionCards} />
@@ -228,36 +230,35 @@ export default function Home() {
 
       <section id="who-we-are" className="bg-surface-2/60 py-16 sm:py-20">
         <div className="w-full px-4">
-          <div className="grid items-center gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <p className="text-xs font-semibold tracking-widest text-muted-foreground">
-                WHO WE ARE
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-                Who We Are
-              </h2>
-              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
-                Fusion Byte IT Consultation and Solutions is an Alberta-based
-                technology company focused on delivering scalable digital
-                transformation services for businesses seeking innovation,
-                security, and operational efficiency.
-              </p>
-            </div>
-            <div className="lg:col-span-5 lg:flex lg:justify-end">
-              <a
-                href="#contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-              >
-                Learn More About Us
-              </a>
-            </div>
+          <div className="flex flex-col items-center text-center">
+            <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+              WHO WE ARE
+            </p>
+
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Who We Are
+            </h2>
+
+            <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
+              Fusion Byte IT Consultation and Solutions is an Alberta-based
+              technology company focused on delivering scalable digital
+              transformation services for businesses seeking innovation,
+              security, and operational efficiency.
+            </p>
+
+            <Link
+              href="/contact-us"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+            >
+              Learn More About Us
+            </Link>
           </div>
         </div>
       </section>
 
       <section id="process" className="py-16 sm:py-20">
         <div className="w-full px-4">
-          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+          <p className="text-lg font-semibold tracking-widest text-muted-foreground">
             PROCESS
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -312,52 +313,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="careers" className="py-16 sm:py-20">
-        <div className="w-full ">
-          <div className="grid gap-10 px-4 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="text-xs font-semibold tracking-widest text-muted-foreground">
-                CAREERS
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-                Build With a Modern Team
-              </h2>
-              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
-                We bring enterprise delivery discipline to modern technology.
-                Share your experience and help organizations ship secure,
-                scalable solutions.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm sm:p-8">
-              <ol className="space-y-5 text-sm text-muted-foreground">
-                <li className="flex gap-3">
-                  <span className="grid size-8 flex-none place-items-center rounded-full bg-muted text-foreground">
-                    1
-                  </span>
-                  <span>
-                    Share your profile and what you want to build.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="grid size-8 flex-none place-items-center rounded-full bg-muted text-foreground">
-                    2
-                  </span>
-                  <span>
-                    Meet the team and align on technical ownership.
-                  </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="grid size-8 flex-none place-items-center rounded-full bg-muted text-foreground">
-                    3
-                  </span>
-                  <span>Deliver enterprise outcomes with modern tooling.</span>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="relative overflow-hidden py-16 sm:py-20">
         <div className="absolute inset-0">
           <Image
@@ -370,33 +325,32 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/55" />
         </div>
 
-        <div className="relative w-full px-0">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center px-4">
-            <div className="lg:col-span-7">
-              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Ready to Start Your Digital Transformation?
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
-                Connect with our team to discuss your project, request a
-                proposal, or explore enterprise technology solutions tailored to
-                your business.
-              </p>
-            </div>
-            <div className="lg:col-span-5 lg:flex lg:justify-end">
-              <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-end">
-                <a
-                  href="#contact"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  Contact Us
-                </a>
-                <Link
-                  href="/get-a-quote"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  Get a Quote
-                </Link>
-              </div>
+        <div className="relative px-4">
+          <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              Ready to Start Your Digital Transformation?
+            </h2>
+
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white sm:text-lg">
+              Connect with our team to discuss your project, request a proposal,
+              or explore enterprise technology solutions tailored to your
+              business.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#contact"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+              >
+                Contact Us
+              </a>
+
+              <Link
+                href="/get-a-quote"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
+              >
+                Get a Quote
+              </Link>
             </div>
           </div>
         </div>

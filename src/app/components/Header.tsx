@@ -5,13 +5,12 @@ import { useEffect, useState } from "react";
 import { MegaMenu } from "./MegaMenu";
 import { SimpleMenu } from "./SimpleMenu";
 import {
-
   careersMenu,
   solutionsMegaMenu,
   whatWeDoMegaMenu,
   whoWeAreMegaMenu,
 } from "./nav";
-import  Image  from 'next/image';
+import Image from "next/image";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -26,18 +25,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black text-white">
       <div className="flex w-full items-center justify-between gap-4 px-4 py-3">
-   <Link href="/" className="flex items-center gap-2">
-  <Image
-    src="/logo.jpeg"
-    width={0}
-    height={0}
-    sizes="100vw"
-    alt="Logo"
-    className="w-56 h-auto"
-  />
-</Link>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/logo.jpeg"
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt="Logo"
+            className="w-56 h-auto"
+          />
+        </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-white/90 lg:flex">
+        <nav className="hidden items-center gap-7 text-lg font-medium text-white/90 lg:flex">
+          <Link href="/">Home</Link>
           <MegaMenu
             label="What We Do"
             groups={whatWeDoMegaMenu}
@@ -86,6 +86,17 @@ export function Header() {
             className="hidden h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 lg:flex"
           >
             Get a Quote
+          </Link>
+
+          <Link href="/" className="flex items-center gap-2 hidden md:block">
+            <Image
+              src="/logo.jpeg"
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt="Logo"
+              className="w-56 h-auto"
+            />
           </Link>
 
           <button
