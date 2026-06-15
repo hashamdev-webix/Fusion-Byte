@@ -14,7 +14,7 @@ export function Footer() {
                 height={0}
                 sizes="100vw"
                 alt="Logo"
-                className="w-52 h-auto"
+                className="w-72 h-auto"
               />
             </Link>
 
@@ -26,67 +26,43 @@ export function Footer() {
 
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4">
             <div>
-              <p className="text-base font-semibold text-foreground">
-                Quick Links
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-foreground">
+              <p className="text-base font-semibold text-white">Quick Links</p>
+              <ul className="mt-4 space-y-2 text-sm text-white">
                 <li>
-                  <Link href="/what-we-do" className="hover:text-foreground">
-                    What We Do
-                  </Link>
+                  <Link href="/what-we-do">What We Do</Link>
                 </li>
                 <li>
-                  <Link href="/who-we-are" className="hover:text-foreground">
-                    Who We Are
-                  </Link>
+                  <Link href="/who-we-are">Who We Are</Link>
                 </li>
                 <li>
-                  <Link href="/careers" className="hover:text-foreground">
-                    Careers
-                  </Link>
+                  <Link href="/careers">Careers</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="hover:text-foreground">
-                    Contact Us
-                  </Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="text-base font-semibold text-foreground">
-                Services
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-foreground">
+              <p className="text-base font-semibold text-white">Services</p>
+              <ul className="mt-4 space-y-2 text-sm text-white">
                 <li>
-                  <Link
-                    href="/what-we-do/ai-ml-development/machine-learning-models"
-                    className="hover:text-foreground"
-                  >
+                  <Link href="/what-we-do/ai-ml-development/machine-learning-models">
                     AI / ML
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/what-we-do/cloud-infrastructure/cloud-consulting"
-                    className="hover:text-foreground"
-                  >
+                  <Link href="/what-we-do/cloud-infrastructure/cloud-consulting">
                     Cloud Consulting
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/what-we-do/cyber-security-solutions/security-audits"
-                    className="hover:text-foreground"
-                  >
+                  <Link href="/what-we-do/cyber-security-solutions/security-audits">
                     Cyber Security
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/what-we-do/custom-software-development/enterprise-software"
-                    className="hover:text-foreground"
-                  >
+                  <Link href="/what-we-do/custom-software-development/enterprise-software">
                     Software Development
                   </Link>
                 </li>
@@ -95,7 +71,7 @@ export function Footer() {
 
             <div>
               <p className="text-base font-semibold text-foreground">Contact</p>
-              <ul className="mt-4 space-y-2 text-sm text-foreground">
+              <ul className="mt-4 space-y-2 text-sm text-white">
                 <li>
                   <a
                     className="hover:text-foreground"

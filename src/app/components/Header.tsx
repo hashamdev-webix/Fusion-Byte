@@ -32,7 +32,7 @@ export function Header() {
             height={0}
             sizes="100vw"
             alt="Logo"
-            className="w-56 h-auto"
+            className="w-72 h-auto"
           />
         </Link>
 
@@ -40,6 +40,7 @@ export function Header() {
           <Link href="/">Home</Link>
           <MegaMenu
             label="What We Do"
+            triggerHref="/what-we-do"
             groups={whatWeDoMegaMenu}
             layout="stack"
             featured={{
@@ -90,12 +91,12 @@ export function Header() {
 
           <Link href="/" className="flex items-center gap-2 hidden md:block">
             <Image
-              src="/logo.jpeg"
+              src="/mono.jpeg"
               width={0}
               height={0}
               sizes="100vw"
               alt="Logo"
-              className="w-56 h-auto"
+              className="w-36 h-36"
             />
           </Link>
 

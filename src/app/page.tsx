@@ -5,45 +5,45 @@ import { HeroBackgroundSlider } from "./components/HeroBackgroundSlider";
 import { QuoteRotator } from "./components/QuoteRotator";
 
 const heroBackgroundImages: string[] = [
-  "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
-  "https://images.unsplash.com/photo-1773332585687-85beb4da71ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VjdXJpdHl8ZW58MHx8MHx8fDA%3D",
 ];
 
 const serviceCards: SliderCard[] = [
   {
     title: "AI / ML Development",
-    href: "#services",
+    href: "/what-we-do#ai-ml-development",
     imageSrc:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Modernize Software",
-    href: "#services",
+    href: "/what-we-do#modernize-software",
     imageSrc:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cloud Consulting Services",
-    href: "#services",
+    href: "/what-we-do#cloud-consulting-services",
     imageSrc:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cyber Security Solutions",
-    href: "#services",
+    href: "/what-we-do#cyber-security-solutions",
     imageSrc:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Digital Marketing",
-    href: "#services",
+    href: "/what-we-do#digital-marketing",
     imageSrc:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Political Campaign Technology",
-    href: "#services",
+    href: "/what-we-do#political-campaign-technology",
     imageSrc:
       "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80",
   },
@@ -52,49 +52,49 @@ const serviceCards: SliderCard[] = [
 const solutionCards: SliderCard[] = [
   {
     title: "Digital Transformation",
-    href: "#solutions",
+    href: "/solutions/digital-transformation",
     imageSrc:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Custom Software Development",
-    href: "#solutions",
+    href: "/solutions/custom-software-development",
     imageSrc:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Mobile App Development",
-    href: "#solutions",
+    href: "/solutions/mobile-app-development",
     imageSrc:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "QA Automation",
-    href: "#solutions",
+    href: "/solutions/qa-automation",
     imageSrc:
       "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cloud Optimization",
-    href: "#solutions",
+    href: "/solutions/cloud-optimization",
     imageSrc:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cyber Security",
-    href: "#solutions",
+    href: "/solutions/cyber-security",
     imageSrc:
       "https://images.unsplash.com/photo-1600267185393-e158a98703de?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Artificial Intelligence",
-    href: "#solutions",
+    href: "/solutions/artificial-intelligence",
     imageSrc:
       "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Blockchain Solutions",
-    href: "#solutions",
+    href: "/solutions/blockchain-solutions",
     imageSrc:
       "https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=1400&q=80",
   },
@@ -143,37 +143,32 @@ export default function Home() {
       </section>
 
       <section id="what-we-do" className="w-full px-4 py-16 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          {/* Image */}
-          <div className="mx-auto w-full max-w-md overflow-hidden border border-border bg-surface shadow-sm">
-            <div className="relative aspect-[4/3] w-full">
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
-                alt="Technology consulting team collaboration"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 35vw, 100vw"
-                priority
-              />
-            </div>
+        <div className="mx-auto grid w-full max-w-7xl items-stretch gap-8 lg:grid-cols-2">
+          <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm lg:min-h-[430px]">
+            <Image
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+              alt="Technology consulting team collaboration"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
           </div>
 
-          {/* Text */}
-          <div>
+          <div className="flex min-h-[320px] flex-col justify-center rounded-3xl border border-border bg-surface p-7 shadow-sm sm:p-10 lg:min-h-[430px]">
             <p className="text-xs font-semibold tracking-widest text-muted-foreground">
               WHAT WE DO
             </p>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            <h2 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               Our Technology Services
             </h2>
-            <p className="mt-5 text-lg leading-7 text-muted-foreground sm:text-xl">
-              Fusion Byte provides enterprise-grade IT consulting and technology{" "}
-              <br />
+            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+              Fusion Byte provides enterprise-grade IT consulting and technology
               solutions including AI/ML development, cloud consulting,
-              <br />
               cybersecurity, digital transformation, software modernization,
-              <br /> digital marketing, and political campaign technology
-              solutions <br /> across Alberta and Canada.
+              digital marketing, and political campaign technology solutions
+              across Alberta and Canada.
             </p>
           </div>
         </div>

@@ -7,6 +7,7 @@ import type { NavGroup } from "./nav";
 type Props = {
   label: string;
   groups: NavGroup[];
+  triggerHref?: string;
   featured?: {
     title: string;
     description: string;
@@ -15,7 +16,13 @@ type Props = {
   layout?: "grid" | "stack";
 };
 
-export function MegaMenu({ label, groups, featured, layout = "grid" }: Props) {
+export function MegaMenu({
+  label,
+  groups,
+  triggerHref,
+  featured,
+  layout = "grid",
+}: Props) {
   const id = useId();
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
@@ -42,6 +49,15 @@ export function MegaMenu({ label, groups, featured, layout = "grid" }: Props) {
     <div
       ref={rootRef}
       className="relative"
+      onMouseEnter={() => {
+        if (triggerHref) {
+          setActiveGroupIndex(null);
+          setOpen(true);
+        }
+      }}
+      onMouseLeave={() => {
+        if (triggerHref) setOpen(false);
+      }}
     >
       <button
         type="button"
@@ -50,6 +66,10 @@ export function MegaMenu({ label, groups, featured, layout = "grid" }: Props) {
         aria-controls={id}
         className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-inherit transition-colors hover:text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         onClick={() => {
+          if (triggerHref) {
+            window.location.href = triggerHref;
+            return;
+          }
           if (!open) setActiveGroupIndex(null);
           setOpen((v) => !v);
         }}
