@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -71,22 +72,53 @@ export function Footer() {
 
             <div>
               <p className="text-base font-semibold text-foreground">Contact</p>
-              <ul className="mt-4 space-y-2 text-sm text-white">
-                <li>
+
+              <ul className="mt-4 space-y-4 text-sm text-white">
+                {/* Email */}
+                <li className="flex items-start gap-3">
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0" />
                   <a
-                    className="hover:text-foreground"
-                    href="mailto:info@fusionbyte.ca"
+                    href="mailto:info@fusionbyteitconsultation.com"
+                    className="hover:text-foreground transition-colors"
                   >
-                    info@fusionbyte.ca
+                    info@fusionbyteitconsultation.com
                   </a>
                 </li>
-                <li>
-                  <span>Alberta, Canada</span>
+
+                {/* Phone */}
+                <li className="flex items-start gap-3">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0" />
+                  <a
+                    href="tel:+18257364145"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    +1 825-736-4145
+                  </a>
+                </li>
+
+                {/* Drayton Valley Office */}
+                <li className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span>
+                    Unit 3-5105 51 Ave,
+                    <br />
+                    Drayton Valley, AB T7A 0C3
+                  </span>
+                </li>
+
+                {/* Calgary Office */}
+                <li className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span>
+                    Unit 335, 3016 5 Ave NE,
+                    <br />
+                    Calgary, AB T2A 6K4
+                  </span>
                 </li>
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <p className="text-base font-semibold text-foreground">Social</p>
               <ul className="mt-4 space-y-2 text-sm text-foreground">
                 <li>
@@ -105,7 +137,7 @@ export function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 

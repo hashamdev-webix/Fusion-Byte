@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "../components/PageHero";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const services = [
   "AI / ML Development",
@@ -40,16 +41,38 @@ export default function Page() {
               Reach Us Directly
             </h2>
             <div className="mt-5 rounded-3xl border border-border bg-surface p-6 text-sm text-muted-foreground shadow-sm">
-              <p className="font-semibold text-foreground">
-                Fusion Byte IT Consultation and Solutions
-              </p>
-              <p className="mt-2">Alberta, Canada</p>
-              <p className="mt-2">
-                Email:{" "}
-                <a className="text-foreground" href="mailto:info@fusionbyte.com">
-                  info@fusionbyte.com
-                </a>
-              </p>
+              <div className="space-y-3">
+                <p className="font-semibold text-foreground">
+                  Fusion Byte IT Consultation and Solutions
+                </p>
+
+                <div className="flex items-start gap-2">
+                  <MapPin size={18} className="mt-1 shrink-0 text-foreground" />
+                  <span>Unit 3-5105 51 Ave, Drayton Valley, AB T7A 0C3</span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <MapPin size={18} className="mt-1 shrink-0 text-foreground" />
+                  <span>Unit 335, 3016 5 Ave NE, Calgary, AB T2A 6K4</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Phone size={18} className="text-foreground" />
+                  <a href="tel:+18257364145" className="text-foreground">
+                    +1 825-736-4145
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Mail size={18} className="text-foreground" />
+                  <a
+                    href="mailto:info@fusionbyteitconsultation.com"
+                    className="text-foreground"
+                  >
+                    info@fusionbyteitconsultation.com
+                  </a>
+                </div>
+              </div>
               <p className="mt-4 leading-6">
                 We respond to all inquiries within 1–2 business days. For
                 project discussions, partnerships, or service requests, please
