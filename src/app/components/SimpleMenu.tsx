@@ -7,9 +7,10 @@ import type { NavItem } from "./nav";
 type Props = {
   label: string;
   items: NavItem[];
+  triggerHref?: string;
 };
 
-export function SimpleMenu({ label, items }: Props) {
+export function SimpleMenu({ label, items, triggerHref }: Props) {
   const id = useId();
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
@@ -35,18 +36,25 @@ export function SimpleMenu({ label, items }: Props) {
     <div
       ref={rootRef}
       className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
     >
-      <button
-        type="button"
+      <Link
+        href={triggerHref ?? "#"}
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={id}
         className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-inherit transition-colors hover:text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-        onClick={() => setOpen((v) => !v)}
+        onFocus={() => setOpen(true)}
+        onClick={(event) => {
+          if (triggerHref) return;
+          event.preventDefault();
+          setOpen((current) => !current);
+        }}
       >
         <span>{label}</span>
-        <span className="text-xs text-muted-foreground">▼</span>
-      </button>
+        <span className="text-xs text-muted-foreground">v</span>
+      </Link>
 
       {open ? (
         <div

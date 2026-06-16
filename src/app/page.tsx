@@ -6,8 +6,8 @@ import { QuoteRotator } from "./components/QuoteRotator";
 
 const heroBackgroundImages: string[] = [
   "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D",
-  "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2VjdXJpdHl8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=90",
+  "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=2200&q=90",
 ];
 
 const serviceCards: SliderCard[] = [
@@ -52,49 +52,49 @@ const serviceCards: SliderCard[] = [
 const solutionCards: SliderCard[] = [
   {
     title: "Digital Transformation",
-    href: "/solutions/digital-transformation",
+    href: "/solutions#digital-transformation",
     imageSrc:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Custom Software Development",
-    href: "/solutions/custom-software-development",
+    href: "/solutions#custom-software-development",
     imageSrc:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Mobile App Development",
-    href: "/solutions/mobile-app-development",
+    href: "/solutions#mobile-app-development",
     imageSrc:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "QA Automation",
-    href: "/solutions/qa-automation",
+    href: "/solutions#qa-automation",
     imageSrc:
       "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cloud Optimization",
-    href: "/solutions/cloud-optimization",
+    href: "/solutions#cloud-optimization",
     imageSrc:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cyber Security",
-    href: "/solutions/cyber-security",
+    href: "/solutions#cyber-security",
     imageSrc:
       "https://images.unsplash.com/photo-1600267185393-e158a98703de?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Artificial Intelligence",
-    href: "/solutions/artificial-intelligence",
+    href: "/solutions#artificial-intelligence",
     imageSrc:
       "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Blockchain Solutions",
-    href: "/solutions/blockchain-solutions",
+    href: "/solutions#blockchain-solutions",
     imageSrc:
       "https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=1400&q=80",
   },
@@ -158,10 +158,10 @@ export default function Home() {
 
           <div className="flex min-h-[320px] flex-col justify-center rounded-3xl border border-border bg-surface p-7 shadow-sm sm:p-10 lg:min-h-[430px]">
             <p className="text-xs font-semibold tracking-widest text-muted-foreground">
-              WHAT WE DO
+              SERVICES
             </p>
             <h2 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Our Technology Services
+              Enterprise Technology Services
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
               Fusion Byte provides enterprise-grade IT consulting and technology
@@ -176,9 +176,9 @@ export default function Home() {
 
       <section id="services" className="bg-surface-2/60 py-16 sm:py-20">
         <div className="w-full px-4">
-          <div className="flex flex-col items-center justify-center gap-6 ">
+          <div className="flex flex-col items-center justify-center gap-6 text-center">
             <div>
-              <p className="text-lg ml-26 font-semibold tracking-widest text-muted-foreground">
+              <p className="text-lg font-semibold tracking-widest text-muted-foreground">
                 SERVICES
               </p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">

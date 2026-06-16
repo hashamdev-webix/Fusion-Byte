@@ -9,21 +9,25 @@ export type NavGroup = {
   items: NavItem[];
 };
 
+const serviceHref = (id: string) => `/what-we-do#${id}`;
+const solutionHref = (id: string) => `/solutions#${id}`;
+const companyHref = (id: string) => `/who-we-are#${id}`;
+
 export const whatWeDoMegaMenu: NavGroup[] = [
   {
     title: "AI / ML Development",
     items: [
       {
         title: "Machine Learning Models",
-        href: "/what-we-do/ai-ml-development/machine-learning-models",
+        href: serviceHref("ai-ml-development"),
       },
       {
         title: "AI Integration",
-        href: "/what-we-do/ai-ml-development/ai-integration",
+        href: serviceHref("ai-ml-development"),
       },
       {
         title: "Predictive Analytics",
-        href: "/what-we-do/ai-ml-development/predictive-analytics",
+        href: serviceHref("ai-ml-development"),
       },
     ],
   },
@@ -32,15 +36,15 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Cloud Consulting",
-        href: "/what-we-do/cloud-infrastructure/cloud-consulting",
+        href: serviceHref("cloud-consulting-services"),
       },
       {
         title: "Cloud Migration",
-        href: "/what-we-do/cloud-infrastructure/cloud-migration",
+        href: serviceHref("cloud-consulting-services"),
       },
       {
         title: "Cloud Optimization",
-        href: "/what-we-do/cloud-infrastructure/cloud-optimization",
+        href: serviceHref("cloud-consulting-services"),
       },
     ],
   },
@@ -49,15 +53,15 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Security Audits",
-        href: "/what-we-do/cyber-security-solutions/security-audits",
+        href: serviceHref("cyber-security-solutions"),
       },
       {
         title: "Threat Detection",
-        href: "/what-we-do/cyber-security-solutions/threat-detection",
+        href: serviceHref("cyber-security-solutions"),
       },
       {
         title: "Risk Assessment",
-        href: "/what-we-do/cyber-security-solutions/risk-assessment",
+        href: serviceHref("cyber-security-solutions"),
       },
     ],
   },
@@ -66,15 +70,15 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Smart Contracts",
-        href: "/what-we-do/blockchain-solutions/smart-contracts",
+        href: serviceHref("blockchain-solutions"),
       },
       {
         title: "Web3 Development",
-        href: "/what-we-do/blockchain-solutions/web3-development",
+        href: serviceHref("blockchain-solutions"),
       },
       {
         title: "Enterprise Blockchain",
-        href: "/what-we-do/blockchain-solutions/enterprise-blockchain",
+        href: serviceHref("blockchain-solutions"),
       },
     ],
   },
@@ -83,15 +87,15 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "SEO & Performance",
-        href: "/what-we-do/digital-marketing/seo-performance",
+        href: serviceHref("digital-marketing"),
       },
       {
         title: "Paid Media Strategy",
-        href: "/what-we-do/digital-marketing/paid-media-strategy",
+        href: serviceHref("digital-marketing"),
       },
       {
         title: "Brand Growth Strategy",
-        href: "/what-we-do/digital-marketing/brand-growth-strategy",
+        href: serviceHref("digital-marketing"),
       },
     ],
   },
@@ -100,15 +104,15 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Legacy System Upgrade",
-        href: "/what-we-do/modernize-software/legacy-system-upgrade",
+        href: serviceHref("modernize-software"),
       },
       {
         title: "Application Refactoring",
-        href: "/what-we-do/modernize-software/application-refactoring",
+        href: serviceHref("modernize-software"),
       },
       {
         title: "System Modernization",
-        href: "/what-we-do/modernize-software/system-modernization",
+        href: serviceHref("modernize-software"),
       },
     ],
   },
@@ -117,41 +121,41 @@ export const whatWeDoMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Campaign Tech Setup",
-        href: "/what-we-do/political-campaigns/campaign-tech-setup",
+        href: serviceHref("political-campaign-technology"),
       },
       {
         title: "Data Strategy",
-        href: "/what-we-do/political-campaigns/data-strategy",
+        href: serviceHref("political-campaign-technology"),
       },
       {
         title: "Communication Automation",
-        href: "/what-we-do/political-campaigns/communication-automation",
+        href: serviceHref("political-campaign-technology"),
       },
     ],
   },
 ];
 
 export const solutionsMenu: NavItem[] = [
-  { title: "Digital Transformation", href: "/solutions/digital-transformation" },
-  { title: "Cloud Optimization", href: "/solutions/cloud-optimization" },
-  { title: "Artificial Intelligence", href: "/solutions/artificial-intelligence" },
+  { title: "Digital Transformation", href: solutionHref("digital-transformation") },
+  { title: "Cloud Optimization", href: solutionHref("cloud-optimization") },
+  { title: "Artificial Intelligence", href: solutionHref("artificial-intelligence") },
   {
     title: "Custom Software Development",
-    href: "/solutions/custom-software-development",
+    href: solutionHref("custom-software-development"),
   },
-  { title: "Mobile App Development", href: "/solutions/mobile-app-development" },
-  { title: "QA Automation", href: "/solutions/qa-automation" },
-  { title: "Cyber Security", href: "/solutions/cyber-security" },
-  { title: "Blockchain Solutions", href: "/solutions/blockchain-solutions" },
+  { title: "Mobile App Development", href: solutionHref("mobile-app-development") },
+  { title: "QA Automation", href: solutionHref("qa-automation") },
+  { title: "Cyber Security", href: solutionHref("cyber-security") },
+  { title: "Blockchain Solutions", href: solutionHref("blockchain-solutions") },
 ];
 
 export const solutionsMegaMenu: NavGroup[] = [
   {
     title: "Strategy & Transformation",
     items: [
-      { title: "Digital Transformation", href: "/solutions/digital-transformation" },
-      { title: "Cloud Optimization", href: "/solutions/cloud-optimization" },
-      { title: "Artificial Intelligence", href: "/solutions/artificial-intelligence" },
+      { title: "Digital Transformation", href: solutionHref("digital-transformation") },
+      { title: "Cloud Optimization", href: solutionHref("cloud-optimization") },
+      { title: "Artificial Intelligence", href: solutionHref("artificial-intelligence") },
     ],
   },
   {
@@ -159,26 +163,26 @@ export const solutionsMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Custom Software Development",
-        href: "/solutions/custom-software-development",
+        href: solutionHref("custom-software-development"),
       },
-      { title: "Mobile App Development", href: "/solutions/mobile-app-development" },
-      { title: "QA Automation", href: "/solutions/qa-automation" },
+      { title: "Mobile App Development", href: solutionHref("mobile-app-development") },
+      { title: "QA Automation", href: solutionHref("qa-automation") },
     ],
   },
   {
     title: "Security & Emerging Tech",
     items: [
-      { title: "Cyber Security", href: "/solutions/cyber-security" },
-      { title: "Blockchain Solutions", href: "/solutions/blockchain-solutions" },
+      { title: "Cyber Security", href: solutionHref("cyber-security") },
+      { title: "Blockchain Solutions", href: solutionHref("blockchain-solutions") },
     ],
   },
 ];
 
 export const whoWeAreMenu: NavItem[] = [
   { title: "About", href: "/who-we-are" },
-  { title: "Mission", href: "/who-we-are/mission" },
-  { title: "Values", href: "/who-we-are/values" },
-  { title: "Expertise", href: "/who-we-are/expertise" },
+  { title: "Mission", href: companyHref("mission") },
+  { title: "Values", href: companyHref("values") },
+  { title: "Expertise", href: companyHref("expertise") },
 ];
 
 export const whoWeAreMegaMenu: NavGroup[] = [
@@ -186,8 +190,8 @@ export const whoWeAreMegaMenu: NavGroup[] = [
     title: "Company Overview",
     items: [
       { title: "About FusionByte", href: "/who-we-are" },
-      { title: "Company Background", href: "/who-we-are/company-background" },
-      { title: "Our Philosophy", href: "/who-we-are/our-philosophy" },
+      { title: "Company Background", href: companyHref("company-overview") },
+      { title: "Our Philosophy", href: companyHref("company-overview") },
     ],
   },
   {
@@ -195,53 +199,53 @@ export const whoWeAreMegaMenu: NavGroup[] = [
     items: [
       {
         title: "Consulting Methodology",
-        href: "/who-we-are/consulting-methodology",
+        href: companyHref("methodology"),
       },
       {
         title: "Client-Centric Model",
-        href: "/who-we-are/client-centric-model",
+        href: companyHref("methodology"),
       },
-      { title: "Agile Delivery Model", href: "/who-we-are/agile-delivery-model" },
+      { title: "Agile Delivery Model", href: companyHref("methodology") },
     ],
   },
   {
     title: "Leadership & Values",
     items: [
-      { title: "Innovation Focus", href: "/who-we-are/innovation-focus" },
+      { title: "Innovation Focus", href: companyHref("values") },
       {
         title: "Integrity & Transparency",
-        href: "/who-we-are/integrity-transparency",
+        href: companyHref("values"),
       },
-      { title: "Quality Commitment", href: "/who-we-are/quality-commitment" },
+      { title: "Quality Commitment", href: companyHref("values") },
     ],
   },
   {
     title: "Global Presence",
     items: [
-      { title: "Alberta Operations", href: "/who-we-are/alberta-operations" },
-      { title: "Canada Focus", href: "/who-we-are/canada-focus" },
-      { title: "Expansion Vision", href: "/who-we-are/expansion-vision" },
+      { title: "Alberta Operations", href: companyHref("company-overview") },
+      { title: "Canada Focus", href: companyHref("company-overview") },
+      { title: "Expansion Vision", href: companyHref("vision") },
     ],
   },
   {
     title: "Our Values",
     items: [
-      { title: "Excellence", href: "/who-we-are/excellence" },
-      { title: "Collaboration", href: "/who-we-are/collaboration" },
+      { title: "Excellence", href: companyHref("values") },
+      { title: "Collaboration", href: companyHref("values") },
       {
         title: "Technology Leadership",
-        href: "/who-we-are/technology-leadership",
+        href: companyHref("values"),
       },
     ],
   },
   {
     title: "Why Choose Us",
     items: [
-      { title: "Industry Expertise", href: "/who-we-are/industry-expertise" },
-      { title: "Scalable Solutions", href: "/who-we-are/scalable-solutions" },
+      { title: "Industry Expertise", href: companyHref("expertise") },
+      { title: "Scalable Solutions", href: companyHref("expertise") },
       {
         title: "Long-Term Partnerships",
-        href: "/who-we-are/long-term-partnerships",
+        href: companyHref("why-choose"),
       },
     ],
   },

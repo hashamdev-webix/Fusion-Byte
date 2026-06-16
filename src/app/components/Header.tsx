@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MegaMenu } from "./MegaMenu";
@@ -10,7 +11,7 @@ import {
   whatWeDoMegaMenu,
   whoWeAreMegaMenu,
 } from "./nav";
-import Image from "next/image";
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,49 +31,55 @@ export function Header() {
             src="/logo.jpeg"
             width={0}
             height={0}
-            sizes="100vw"
-            alt="Logo"
-            className="w-72 h-auto"
+            sizes="(min-width: 1280px) 256px, (min-width: 640px) 224px, 192px"
+            alt="FusionByte logo"
+            className="h-auto w-48 sm:w-56 xl:w-64"
           />
         </Link>
 
         <nav className="hidden items-center gap-7 text-lg font-medium text-white/90 lg:flex">
           <Link href="/">Home</Link>
           <MegaMenu
-            label="What We Do"
+            label="Services"
             triggerHref="/what-we-do"
             groups={whatWeDoMegaMenu}
             layout="stack"
             featured={{
               title: "Enterprise Technology Services",
               description:
-                "AI/ML, cloud, cybersecurity, modernization, marketing tech, and political technology—delivered with enterprise discipline.",
+                "AI/ML, cloud, cybersecurity, modernization, marketing tech, and political technology delivered with enterprise discipline.",
               href: "/what-we-do",
             }}
           />
           <MegaMenu
             label="Solutions"
+            triggerHref="/solutions"
             groups={solutionsMegaMenu}
             layout="stack"
             featured={{
               title: "Outcome-Driven Solutions",
               description:
-                "Strategy, engineering, security, and emerging tech—delivered as scalable programs with measurable milestones.",
+                "Strategy, engineering, security, and emerging tech delivered as scalable programs with measurable milestones.",
               href: "/solutions",
             }}
           />
           <MegaMenu
             label="Who We Are"
+            triggerHref="/who-we-are"
             groups={whoWeAreMegaMenu}
             layout="stack"
             featured={{
               title: "Technology Partner for Digital Transformation in Canada",
               description:
-                "Learn how we operate—our methodology, values, and the enterprise approach behind every engagement.",
+                "Learn how we operate: our methodology, values, and the enterprise approach behind every engagement.",
               href: "/who-we-are",
             }}
           />
-          <SimpleMenu label="Careers" items={careersMenu} />
+          <SimpleMenu
+            label="Careers"
+            triggerHref="/careers"
+            items={careersMenu}
+          />
           <Link
             href="/contact-us"
             className="rounded-md px-2 py-1 transition-colors hover:text-white"
@@ -89,14 +96,17 @@ export function Header() {
             Get a Quote
           </Link>
 
-          <Link href="/" className="flex items-center gap-2 hidden md:block">
+          <Link
+            href="/"
+            className="hidden size-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white md:flex"
+          >
             <Image
               src="/mono.jpeg"
-              width={0}
-              height={0}
-              sizes="100vw"
-              alt="Logo"
-              className="w-36 h-36"
+              width={48}
+              height={48}
+              sizes="48px"
+              alt="FusionByte monogram"
+              className="h-full w-full object-cover"
             />
           </Link>
 
@@ -121,7 +131,7 @@ export function Header() {
             <div className="flex flex-col gap-2">
               <details className="rounded-xl border border-white/10 bg-black">
                 <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-white">
-                  What We Do
+                  Services
                 </summary>
                 <div className="space-y-4 px-4 pb-4">
                   <Link
@@ -139,7 +149,7 @@ export function Header() {
                       <div className="mt-2 space-y-1">
                         {group.items.map((item) => (
                           <Link
-                            key={item.href}
+                            key={`${group.title}-${item.title}`}
                             href={item.href}
                             className="block rounded-xl px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
                             onClick={() => setIsMenuOpen(false)}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { whatWeDoMegaMenu } from "../components/nav";
 import { PageHero } from "../components/PageHero";
 import {
   whatWeDoFinalCta,
@@ -12,6 +13,41 @@ export default function Page() {
   return (
     <div className="bg-background">
       <PageHero {...whatWeDoHero} />
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+            SERVICES MENU
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            Explore Our Services
+          </h2>
+        </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {whatWeDoMegaMenu.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+            >
+              <h3 className="text-sm font-semibold tracking-wide text-foreground">
+                {group.title}
+              </h3>
+              <div className="mt-5 space-y-2">
+                {group.items.map((item) => (
+                  <Link
+                    key={`${group.title}-${item.title}`}
+                    href={item.href}
+                    className="block rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-muted-foreground transition hover:border-border hover:bg-surface-2 hover:text-foreground"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {whatWeDoSections.map((section) => (
         <section

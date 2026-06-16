@@ -2,9 +2,11 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const footerLinkClass = "transition-colors hover:text-white";
+
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-[#050505]">
+    <footer className="border-t border-white/10 bg-black text-white">
       <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -14,91 +16,104 @@ export function Footer() {
                 width={0}
                 height={0}
                 sizes="100vw"
-                alt="Logo"
-                className="w-72 h-auto"
+                alt="FusionByte logo"
+                className="h-auto w-56 sm:w-64"
               />
             </Link>
 
-            <p className="mt-4 max-w-sm text-lg leading-6 text-muted-foreground">
-              “Transforming Businesses Through Intelligent Technology
-              Solutions.”
+            <p className="mt-4 max-w-sm text-lg leading-7 text-white/80">
+              Transforming businesses through intelligent technology solutions.
             </p>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4">
             <div>
               <p className="text-base font-semibold text-white">Quick Links</p>
-              <ul className="mt-4 space-y-2 text-sm text-white">
+              <ul className="mt-4 space-y-2 text-sm text-white/85">
                 <li>
-                  <Link href="/what-we-do">What We Do</Link>
+                  <Link className={footerLinkClass} href="/what-we-do">
+                    Services
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/who-we-are">Who We Are</Link>
+                  <Link className={footerLinkClass} href="/who-we-are">
+                    Who We Are
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/careers">Careers</Link>
+                  <Link className={footerLinkClass} href="/careers">
+                    Careers
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us">Contact Us</Link>
+                  <Link className={footerLinkClass} href="/contact-us">
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div>
               <p className="text-base font-semibold text-white">Services</p>
-              <ul className="mt-4 space-y-2 text-sm text-white">
+              <ul className="mt-4 space-y-2 text-sm text-white/85">
                 <li>
-                  <Link href="/what-we-do/ai-ml-development/machine-learning-models">
+                  <Link
+                    className={footerLinkClass}
+                    href="/what-we-do#ai-ml-development"
+                  >
                     AI / ML
                   </Link>
                 </li>
                 <li>
-                  <Link href="/what-we-do/cloud-infrastructure/cloud-consulting">
+                  <Link
+                    className={footerLinkClass}
+                    href="/what-we-do#cloud-consulting-services"
+                  >
                     Cloud Consulting
                   </Link>
                 </li>
                 <li>
-                  <Link href="/what-we-do/cyber-security-solutions/security-audits">
+                  <Link
+                    className={footerLinkClass}
+                    href="/what-we-do#cyber-security-solutions"
+                  >
                     Cyber Security
                   </Link>
                 </li>
                 <li>
-                  <Link href="/what-we-do/custom-software-development/enterprise-software">
-                    Software Development
+                  <Link
+                    className={footerLinkClass}
+                    href="/what-we-do#modernize-software"
+                  >
+                    Software Modernization
                   </Link>
                 </li>
               </ul>
             </div>
 
-            <div>
-              <p className="text-base font-semibold text-foreground">Contact</p>
+            <div className="sm:col-span-2">
+              <p className="text-base font-semibold text-white">Contact</p>
 
-              <ul className="mt-4 space-y-4 text-sm text-white">
-                {/* Email */}
+              <ul className="mt-4 grid gap-4 text-sm text-white/85 sm:grid-cols-2">
                 <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-4 w-4 shrink-0" />
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <a
                     href="mailto:info@fusionbyteitconsultation.com"
-                    className="hover:text-foreground transition-colors"
+                    className={footerLinkClass}
                   >
                     info@fusionbyteitconsultation.com
                   </a>
                 </li>
-
-                {/* Phone */}
+                <br />
                 <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 shrink-0" />
-                  <a
-                    href="tel:+18257364145"
-                    className="hover:text-foreground transition-colors"
-                  >
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-white" />
+                  <a href="tel:+18257364145" className={footerLinkClass}>
                     +1 825-736-4145
                   </a>
                 </li>
-
-                {/* Drayton Valley Office */}
+                <br />
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <span>
                     Unit 3-5105 51 Ave,
                     <br />
@@ -106,9 +121,8 @@ export function Footer() {
                   </span>
                 </li>
 
-                {/* Calgary Office */}
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <span>
                     Unit 335, 3016 5 Ave NE,
                     <br />
@@ -117,33 +131,12 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-
-            {/* <div>
-              <p className="text-base font-semibold text-foreground">Social</p>
-              <ul className="mt-4 space-y-2 text-sm text-foreground">
-                <li>
-                  <a className="hover:text-foreground" href="#">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-foreground" href="#">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-foreground" href="#">
-                    X
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-border/80 pt-6 text-lg text-foreground sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-base text-white/75 sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Fusion Byte IT Consultation and
+            &copy; {new Date().getFullYear()} Fusion Byte IT Consultation and
             Solutions
           </p>
         </div>

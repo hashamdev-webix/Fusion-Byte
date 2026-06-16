@@ -9,8 +9,8 @@ export type ContentSection = {
 };
 
 export const whatWeDoHero = {
-  eyebrow: "WHAT WE DO",
-  title: "Enterprise Technology Solutions for Digital Transformation",
+  eyebrow: "SERVICES",
+  title: "Enterprise Technology Services for Digital Transformation",
   description:
     "Fusion Byte delivers AI, cloud, cybersecurity, software modernization, digital marketing, and political technology solutions designed to help organizations innovate, scale, and operate efficiently across Canada.",
   primaryCta: { label: "Request a Service", href: "/get-a-quote" },

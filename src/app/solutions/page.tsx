@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { solutionsMegaMenu } from "../components/nav";
 import { PageHero } from "../components/PageHero";
 import {
   solutionsBySlug,
@@ -7,16 +8,9 @@ import {
   solutionsHero,
 } from "../content/siteCopy";
 
-const solutionOrder = [
-  "digital-transformation",
-  "custom-software-development",
-  "mobile-app-development",
-  "qa-automation",
-  "cloud-optimization",
-  "cyber-security",
-  "artificial-intelligence",
-  "blockchain-solutions",
-] as const;
+const solutionOrder = solutionsMegaMenu.flatMap((group) =>
+  group.items.map((item) => item.href.split("#").pop()).filter(Boolean),
+);
 
 const solutionsCtaImage =
   "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80";
@@ -26,7 +20,43 @@ export default function Page() {
     <div className="bg-background">
       <PageHero {...solutionsHero} />
 
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+            SOLUTIONS MENU
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+            Explore Our Solutions
+          </h2>
+        </div>
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {solutionsMegaMenu.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
+            >
+              <h3 className="text-sm font-semibold tracking-wide text-foreground">
+                {group.title}
+              </h3>
+              <div className="mt-5 space-y-2">
+                {group.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-muted-foreground transition hover:border-border hover:bg-surface-2 hover:text-foreground"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {solutionOrder.map((slug, index) => {
+        if (!slug) return null;
         const section = solutionsBySlug[slug];
         if (!section) return null;
 
