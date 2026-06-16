@@ -74,9 +74,9 @@ export default function Page() {
                 </div>
               </div>
               <p className="mt-4 leading-6">
-                We respond to all inquiries within 1–2 business days. For
+                We respond to all inquiries within 1-2 business days. For
                 project discussions, partnerships, or service requests, please
-                use the form or click “Get a Quote”.
+                use the form or click &quot;Get a Quote&quot;.
               </p>
             </div>
           </div>
@@ -184,13 +184,26 @@ export default function Page() {
           Our Location
         </h2>
         <div className="mt-6 overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
-          <div className="relative aspect-[16/7] w-full bg-muted">
-            <div className="absolute inset-0 grid place-items-center px-6 text-center text-sm text-muted-foreground">
-              Embedded Google Map: Alberta, Canada Office Location
-            </div>
+          <div className="grid lg:grid-cols-2">
+            <iframe
+              title="FusionByte Drayton Valley office map"
+              src="https://www.google.com/maps?q=Unit%203%205105%2051%20Ave%20Drayton%20Valley%20AB%20T7A%200C3&output=embed"
+              className="h-80 w-full border-0 lg:h-[420px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <iframe
+              title="FusionByte Calgary office map"
+              src="https://www.google.com/maps?q=Unit%20335%203016%205%20Ave%20NE%20Calgary%20AB%20T2A%206K4&output=embed"
+              className="h-80 w-full border-0 lg:h-[420px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
           <div className="p-6">
-            <p className="text-sm leading-6 text-muted-foreground">
+            <p className="text-base leading-7 text-muted-foreground">
               FusionByte is proudly based in Alberta and serves businesses
               across Canada with enterprise technology solutions and consulting
               services.
@@ -238,7 +251,7 @@ export default function Page() {
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
               <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Let’s Build Your Next Technology Solution
+                Let&apos;s Build Your Next Technology Solution
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
                 Connect with our team today to discuss your requirements and

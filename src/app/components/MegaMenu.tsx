@@ -82,7 +82,7 @@ export function MegaMenu({
           id={id}
           role="menu"
           className={[
-            "absolute left-1/2 top-full mt-3 -translate-x-1/2 overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl",
+            "absolute left-1/2 top-full mt-0 -translate-x-1/2 overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl",
             layout === "stack"
               ? "w-[min(980px,calc(100vw-1.5rem))]"
               : "w-[min(1120px,calc(100vw-1.5rem))]",
@@ -193,7 +193,7 @@ export function MegaMenu({
                         </p>
                         <ul className="mt-3 max-h-0 space-y-1 overflow-hidden opacity-0 transition-all duration-200 group-hover:max-h-40 group-hover:opacity-100 group-focus-within:max-h-40 group-focus-within:opacity-100">
                           {group.items.map((item) => (
-                          <li key={`${item.href}-${item.title}`}>
+                            <li key={`${item.href}-${item.title}`}>
                               <Link
                                 href={item.href}
                                 className="block rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-surface-2"

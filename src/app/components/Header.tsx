@@ -98,15 +98,15 @@ export function Header() {
 
           <Link
             href="/"
-            className="hidden size-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white md:flex"
+            className="hidden h-12 w-16 shrink-0 items-center justify-center md:flex"
           >
             <Image
               src="/mono.jpeg"
-              width={48}
+              width={64}
               height={48}
-              sizes="48px"
+              sizes="64px"
               alt="FusionByte monogram"
-              className="h-full w-full object-cover"
+              className="h-12 w-16 object-contain"
             />
           </Link>
 

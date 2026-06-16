@@ -60,7 +60,7 @@ export function SimpleMenu({ label, items, triggerHref }: Props) {
         <div
           id={id}
           role="menu"
-          className="absolute left-0 top-full mt-3 w-72 overflow-hidden rounded-2xl border border-border bg-surface shadow-xl"
+          className="absolute left-0 top-full mt-0 w-72 overflow-hidden rounded-2xl border border-border bg-surface shadow-xl"
         >
           <ul className="p-2">
             {items.map((item) => (

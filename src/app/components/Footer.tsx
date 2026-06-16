@@ -21,15 +21,15 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mt-4 max-w-sm text-lg leading-7 text-white">
+            <p className="mt-4 max-w-sm text-xl leading-8 text-white">
               Transforming businesses through intelligent technology solutions.
             </p>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4">
             <div>
-              <p className="text-base font-semibold text-white">Quick Links</p>
-              <ul className="mt-4 space-y-2 text-sm text-white">
+              <p className="text-lg font-semibold text-white">Quick Links</p>
+              <ul className="mt-4 space-y-3 text-base text-white">
                 <li>
                   <Link className={footerLinkClass} href="/what-we-do">
                     Services
@@ -54,8 +54,8 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-base font-semibold text-white">Services</p>
-              <ul className="mt-4 space-y-2 text-sm text-white">
+              <p className="text-lg font-semibold text-white">Services</p>
+              <ul className="mt-4 space-y-3 text-base text-white">
                 <li>
                   <Link
                     className={footerLinkClass}
@@ -92,9 +92,9 @@ export function Footer() {
             </div>
 
             <div className="sm:col-span-2">
-              <p className="text-base font-semibold text-white">Contact</p>
+              <p className="text-lg font-semibold text-white">Contact</p>
 
-              <ul className="mt-4 grid gap-4 text-sm text-white sm:grid-cols-2">
+              <ul className="mt-4 grid gap-4 text-base leading-7 text-white sm:grid-cols-2">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <a
@@ -103,15 +103,14 @@ export function Footer() {
                   >
                     info@fusionbyteitconsultation.com
                   </a>
-                </li>
-                <br />
+                </li> <br/>
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <a href="tel:+18257364145" className={footerLinkClass}>
                     +1 825-736-4145
                   </a>
                 </li>
-                <br />
+                <br/>
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <span>
@@ -134,7 +133,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-base text-white sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-lg text-white sm:flex-row sm:items-center">
           <p>
             &copy; {new Date().getFullYear()} Fusion Byte IT Consultation and
             Solutions
