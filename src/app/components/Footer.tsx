@@ -21,7 +21,7 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mt-4 max-w-sm text-lg leading-7 text-white/80">
+            <p className="mt-4 max-w-sm text-lg leading-7 text-white">
               Transforming businesses through intelligent technology solutions.
             </p>
           </div>
@@ -29,7 +29,7 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4">
             <div>
               <p className="text-base font-semibold text-white">Quick Links</p>
-              <ul className="mt-4 space-y-2 text-sm text-white/85">
+              <ul className="mt-4 space-y-2 text-sm text-white">
                 <li>
                   <Link className={footerLinkClass} href="/what-we-do">
                     Services
@@ -55,7 +55,7 @@ export function Footer() {
 
             <div>
               <p className="text-base font-semibold text-white">Services</p>
-              <ul className="mt-4 space-y-2 text-sm text-white/85">
+              <ul className="mt-4 space-y-2 text-sm text-white">
                 <li>
                   <Link
                     className={footerLinkClass}
@@ -94,7 +94,7 @@ export function Footer() {
             <div className="sm:col-span-2">
               <p className="text-base font-semibold text-white">Contact</p>
 
-              <ul className="mt-4 grid gap-4 text-sm text-white/85 sm:grid-cols-2">
+              <ul className="mt-4 grid gap-4 text-sm text-white sm:grid-cols-2">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <a
@@ -134,7 +134,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-base text-white/75 sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-base text-white sm:flex-row sm:items-center">
           <p>
             &copy; {new Date().getFullYear()} Fusion Byte IT Consultation and
             Solutions
