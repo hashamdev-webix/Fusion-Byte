@@ -53,28 +53,37 @@ export function SimpleMenu({ label, items, triggerHref }: Props) {
         }}
       >
         <span>{label}</span>
-        <span className="text-xs text-muted-foreground">v</span>
+        <span aria-hidden="true">&#9660;</span>
       </Link>
 
       {open ? (
         <div
           id={id}
           role="menu"
-          className="absolute left-0 top-full mt-0 w-72 overflow-hidden rounded-2xl border border-border bg-surface shadow-xl"
+          className="absolute left-1/2 top-full mt-0 w-[min(760px,calc(100vw-2rem))] -translate-x-1/2 overflow-hidden rounded-[18px] border border-white/15 bg-black p-6 text-white shadow-2xl"
         >
-          <ul className="p-2">
-            {items.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-surface-2"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="font-mono text-sm leading-8">
+            <div className="border-y border-dashed border-white/65 px-3 py-2 uppercase">
+              | {label}
+              <span className="float-right">|</span>
+            </div>
+
+            <div className="border-b border-dashed border-white/65 px-3 py-5">
+              <p>|</p>
+              <p>| WANT TO MAKE A CHANGE</p>
+              <p>
+                | - Explore opportunities to work on AI, Cloud, Cyber Security,
+              </p>
+              <p>| &nbsp;Digital Transformation, and Enterprise Technology projects.</p>
+              <Link
+                href={items[0]?.href ?? triggerHref ?? "#"}
+                className="mt-4 block text-white/90 hover:text-primary"
+                onClick={() => setOpen(false)}
+              >
+                | [ View Opportunities ]
+              </Link>
+            </div>
+          </div>
         </div>
       ) : null}
     </div>

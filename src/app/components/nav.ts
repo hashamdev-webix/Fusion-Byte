@@ -15,6 +15,40 @@ const companyHref = (id: string) => `/who-we-are#${id}`;
 
 export const whatWeDoMegaMenu: NavGroup[] = [
   {
+    title: "Digital Transformation",
+    items: [
+      {
+        title: "Strategy Consulting",
+        href: "/what-we-do",
+      },
+      {
+        title: "Process Optimization",
+        href: "/what-we-do",
+      },
+      {
+        title: "Technology Roadmapping",
+        href: "/what-we-do",
+      },
+    ],
+  },
+  {
+    title: "Custom Software Development",
+    items: [
+      {
+        title: "Enterprise Software",
+        href: "/what-we-do",
+      },
+      {
+        title: "Web Applications",
+        href: "/what-we-do",
+      },
+      {
+        title: "System Architecture",
+        href: "/what-we-do",
+      },
+    ],
+  },
+  {
     title: "AI / ML Development",
     items: [
       {

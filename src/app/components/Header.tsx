@@ -40,15 +40,16 @@ export function Header() {
         <nav className="hidden items-center gap-7 text-lg font-medium text-white/90 lg:flex">
           <Link href="/">Home</Link>
           <MegaMenu
-            label="Services"
+            label="What We Do"
             triggerHref="/what-we-do"
             groups={whatWeDoMegaMenu}
             layout="stack"
             featured={{
-              title: "Enterprise Technology Services",
+              title: "End-to-End IT Consulting & Enterprise Technology Solutions",
               description:
                 "AI/ML, cloud, cybersecurity, modernization, marketing tech, and political technology delivered with enterprise discipline.",
               href: "/what-we-do",
+              ctaLabel: "Explore All Services",
             }}
           />
           <MegaMenu
@@ -57,10 +58,11 @@ export function Header() {
             groups={solutionsMegaMenu}
             layout="stack"
             featured={{
-              title: "Outcome-Driven Solutions",
+              title: "Explore All Solutions",
               description:
                 "Strategy, engineering, security, and emerging tech delivered as scalable programs with measurable milestones.",
               href: "/solutions",
+              ctaLabel: "Explore All Solutions",
             }}
           />
           <MegaMenu
@@ -73,6 +75,7 @@ export function Header() {
               description:
                 "Learn how we operate: our methodology, values, and the enterprise approach behind every engagement.",
               href: "/who-we-are",
+              ctaLabel: "Learn More About Us",
             }}
           />
           <SimpleMenu
@@ -96,17 +99,14 @@ export function Header() {
             Get a Quote
           </Link>
 
-          <Link
-            href="/"
-            className="hidden h-12 w-16 shrink-0 items-center justify-center md:flex"
-          >
+          <Link href="/" className="hidden md:flex items-center gap-2">
             <Image
               src="/mono.jpeg"
-              width={64}
-              height={48}
-              sizes="64px"
-              alt="FusionByte monogram"
-              className="h-12 w-16 object-contain"
+              width={0}
+              height={0}
+              sizes="(min-width: 1280px) 256px, (min-width: 640px) 224px, 192px"
+              alt="FusionByte logo"
+              className="h-32 w-36 sm:w-44 "
             />
           </Link>
 

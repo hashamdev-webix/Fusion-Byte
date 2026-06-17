@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { whoWeAreMegaMenu } from "../components/nav";
 import { PageHero } from "../components/PageHero";
 import {
   whoWeAreExpertise,
@@ -36,65 +35,31 @@ export default function Page() {
     <div className="bg-background">
       <PageHero {...whoWeAreHero} />
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-xs font-semibold tracking-widest text-muted-foreground">
-            WHO WE ARE MENU
-          </p>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Learn About FusionByte
-          </h2>
-        </div>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {whoWeAreMegaMenu.map((group) => (
-            <div
-              key={group.title}
-              className="rounded-3xl border border-border bg-surface p-6 shadow-sm"
-            >
-              <h3 className="text-sm font-semibold tracking-wide text-foreground">
-                {group.title}
-              </h3>
-              <div className="mt-5 space-y-2">
-                {group.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block rounded-2xl border border-transparent px-4 py-3 text-sm font-medium text-muted-foreground transition hover:border-border hover:bg-surface-2 hover:text-foreground"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section
         id={whoWeAreOverview.id}
         className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
       >
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-7">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <div className="grid items-stretch gap-8 lg:grid-cols-2">
+          <div className="flex min-h-[320px] flex-col justify-center rounded-3xl border border-border bg-surface p-7 shadow-sm sm:p-10 lg:min-h-[430px]">
+            <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+              WHO WE ARE
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               {whoWeAreOverview.title}
             </h2>
-            <p className="mt-4 text-base leading-7 text-muted-foreground">
+            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
               {whoWeAreOverview.description}
             </p>
           </div>
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
-              <Image
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
-                alt="Enterprise collaboration"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-            </div>
+          <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm lg:min-h-[430px]">
+            <Image
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+              alt="Enterprise collaboration"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
           </div>
         </div>
       </section>
@@ -103,24 +68,25 @@ export default function Page() {
         id={whoWeAreMission.id}
         className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
       >
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
-              <Image
-                src={missionImage}
-                alt="Technology roadmap and digital strategy dashboard"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-            </div>
+        <div className="grid items-stretch gap-8 lg:grid-cols-2">
+          <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm lg:min-h-[430px]">
+            <Image
+              src={missionImage}
+              alt="Technology roadmap and digital strategy dashboard"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
           </div>
-          <div className="lg:col-span-7">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          <div className="flex min-h-[320px] flex-col justify-center rounded-3xl border border-border bg-surface p-7 shadow-sm sm:p-10 lg:min-h-[430px]">
+            <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+              MISSION
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               {whoWeAreMission.title}
             </h2>
-            <p className="mt-4 text-base leading-7 text-muted-foreground">
+            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
               {whoWeAreMission.description}
             </p>
           </div>
@@ -131,26 +97,27 @@ export default function Page() {
         id={whoWeAreVision.id}
         className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
       >
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-7">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <div className="grid items-stretch gap-8 lg:grid-cols-2">
+          <div className="flex min-h-[320px] flex-col justify-center rounded-3xl border border-border bg-surface p-7 shadow-sm sm:p-10 lg:min-h-[430px]">
+            <p className="text-xs font-semibold tracking-widest text-muted-foreground">
+              VISION
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               {whoWeAreVision.title}
             </h2>
-            <p className="mt-4 text-base leading-7 text-muted-foreground">
+            <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
               {whoWeAreVision.description}
             </p>
           </div>
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm">
-              <Image
-                src={visionImage}
-                alt="Futuristic enterprise technology environment"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-            </div>
+          <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-border bg-surface shadow-sm lg:min-h-[430px]">
+            <Image
+              src={visionImage}
+              alt="Futuristic enterprise technology environment"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
           </div>
         </div>
       </section>
@@ -199,7 +166,9 @@ export default function Page() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5">
-                <p className="text-sm font-semibold leading-5 text-white">{t}</p>
+                <p className="text-sm font-semibold leading-5 text-white">
+                  {t}
+                </p>
               </div>
             </div>
           ))}

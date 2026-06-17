@@ -103,14 +103,15 @@ export function Footer() {
                   >
                     info@fusionbyteitconsultation.com
                   </a>
-                </li> <br/>
+                </li>{" "}
+                <br />
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <a href="tel:+18257364145" className={footerLinkClass}>
                     +1 825-736-4145
                   </a>
                 </li>
-                <br/>
+                <br />
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white" />
                   <span>
@@ -119,14 +120,9 @@ export function Footer() {
                     Drayton Valley, AB T7A 0C3
                   </span>
                 </li>
-
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white" />
-                  <span>
-                    Unit 335, 3016 5 Ave NE,
-                    <br />
-                    Calgary, AB T2A 6K4
-                  </span>
+                  <span>Unit 335, 3016 5 Ave NE, Calgary, AB T2A 6K4</span>
                 </li>
               </ul>
             </div>
