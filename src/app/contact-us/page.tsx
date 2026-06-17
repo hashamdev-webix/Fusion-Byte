@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { FinalCtaSection } from "../components/FinalCtaSection";
 import { PageHero } from "../components/PageHero";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -15,9 +15,6 @@ const services = [
 
 const contactHeroImage =
   "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80";
-
-const contactCtaImage =
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=80";
 
 export default function Page() {
   return (
@@ -235,48 +232,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0">
-          <Image
-            src={contactCtaImage}
-            alt="Professional technology team"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-
-        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Let&apos;s Build Your Next Technology Solution
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
-                Connect with our team today to discuss your requirements and
-                explore scalable, secure, and innovative enterprise solutions.
-              </p>
-            </div>
-            <div className="lg:col-span-5 lg:flex lg:justify-end">
-              <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-end">
-                <Link
-                  href="/contact-us"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/get-a-quote"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  Get a Quote
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCtaSection
+        title="Let's Build Your Next Technology Solution"
+        description="Connect with our team today to discuss your requirements and explore scalable, secure, and innovative enterprise solutions."
+        primary={{ label: "Contact Us", href: "/contact-us" }}
+        secondary={{ label: "Get a Quote", href: "/get-a-quote" }}
+      />
     </div>
   );
 }

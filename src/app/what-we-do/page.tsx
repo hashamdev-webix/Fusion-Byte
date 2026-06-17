@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FinalCtaSection } from "../components/FinalCtaSection";
 import { PageHero } from "../components/PageHero";
 import {
   whatWeDoFinalCta,
@@ -81,47 +82,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80"
-            alt="Modern tech collaboration"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-
-        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                {whatWeDoFinalCta.title}
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">
-                {whatWeDoFinalCta.description}
-              </p>
-            </div>
-            <div className="lg:col-span-5 lg:flex lg:justify-end">
-              <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-end">
-                <Link
-                  href={whatWeDoFinalCta.primary.href}
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  {whatWeDoFinalCta.primary.label}
-                </Link>
-                <Link
-                  href={whatWeDoFinalCta.secondary.href}
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
-                >
-                  {whatWeDoFinalCta.secondary.label}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCtaSection
+        title={whatWeDoFinalCta.title}
+        description={whatWeDoFinalCta.description}
+        primary={whatWeDoFinalCta.primary}
+        secondary={whatWeDoFinalCta.secondary}
+      />
     </div>
   );
 }
